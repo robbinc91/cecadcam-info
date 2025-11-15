@@ -2,6 +2,9 @@
 // Language translations
 const translations = {
     en: {
+        robin_director: "Director of the Study Center",
+        robin_specialty: "B.Sc. in Computer Science",
+        main_title: "CAD/CAM Study Center",
         nav_about: "About",
         nav_mission: "Mission",
         nav_programs: "Programs",
@@ -9,7 +12,7 @@ const translations = {
         nav_research: "Research",
         nav_projects: "Projects",
         nav_collaborations: "Collaborations",
-        hero_title: "COMPUTER-AIDED DESIGN AND COMPUTER AIDED MANUFACTURING",
+        hero_title: "COMPUTER-AIDED DESIGN AND MANUFACTURING",
         hero_subtitle: "A leading Study Center with 30 years of experience developing engineering research projects that impact the university, the region, and the nation",
         hero_btn: "Learn More",
         about_title: "About Us",
@@ -109,6 +112,9 @@ const translations = {
         footer_rights: "All Rights Reserved."
     },
     es: {
+        robin_director: "Director del Centro de Estudios",
+        robin_specialty: "Lic. en Ciencias de la Computación",
+        main_title: "Centro de Estudios CAD/CAM",
         nav_about: "Acerca de",
         nav_mission: "Misión",
         nav_programs: "Programas",
@@ -116,7 +122,7 @@ const translations = {
         nav_research: "Investigación",
         nav_projects: "Proyectos",
         nav_collaborations: "Colaboraciones",
-        hero_title: "DISEÑO ASISTIDO POR COMPUTADORA Y FABRICACIÓN ASISTIDA POR COMPUTADORA",
+        hero_title: "DISEÑO Y FABRICACIÓN ASISTIDOS POR COMPUTADORA",
         hero_subtitle: "Un Centro de Estudios líder con 30 años de experiencia desarrollando proyectos de investigación en ingeniería que impactan la universidad, la región y la nación",
         hero_btn: "Más Información",
         about_title: "Acerca de Nosotros",
@@ -216,6 +222,9 @@ const translations = {
         footer_rights: "Todos los Derechos Reservados."
     },
     ru: {
+        robin_director: "Director of the Study Center",
+        robin_specialty: "B.Sc. in Computer Science",
+        main_title: "CAD/CAM Study Center",
         nav_about: "О нас",
         nav_mission: "Миссия",
         nav_programs: "Программы",
@@ -323,6 +332,9 @@ const translations = {
         footer_rights: "Все права защищены."
     },
     zh: {
+        robin_director: "Director of the Study Center",
+        robin_specialty: "B.Sc. in Computer Science",
+        main_title: "CAD/CAM Study Center",
         nav_about: "关于我们",
         nav_mission: "使命",
         nav_programs: "项目",

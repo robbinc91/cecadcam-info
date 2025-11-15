@@ -457,6 +457,12 @@ section {
     font-size: 3rem;
 }
 
+.project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
 .project-content {
     padding: 20px;
 }
