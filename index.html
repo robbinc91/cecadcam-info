@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The CAD/CAM Study Center at the University of Holguín offers advanced engineering research, education in CAD/CAM/CAE technologies, and international collaboration projects.">
     <title>CAD/CAM Study Center - University of Holguín</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -28,17 +30,25 @@
                     <li><a href="#collaborations" data-translate="nav_collaborations">Collaborations</a></li>
                 </ul>
             </nav>
-            <div class="language-selector">
-                <button class="language-btn" id="languageBtn">
-                    <span id="currentLang">English</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="language-options" id="languageOptions">
-                    <a href="#" data-lang="en">English</a>
-                    <a href="#" data-lang="es">Español</a>
-                    <a href="#" data-lang="ru">Русский</a>
-                    <a href="#" data-lang="zh">中国人</a>
+            <div class="header-actions">
+                <div class="language-selector">
+                    <button class="language-btn" id="languageBtn">
+                        <span id="currentLang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-options" id="languageOptions">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="es">Español</a>
+                        <a href="#" data-lang="ru">Русский</a>
+                        <a href="#" data-lang="zh">中文</a>
+                    </div>
                 </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -124,130 +134,8 @@
         <div class="container">
             <h2 class="section-title" data-translate="team_title">Our Team</h2>
             <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/robin_cabeza_ruiz.png" alt="Robin Cabeza-Ruiz, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Robin Cabeza-Ruiz, PhD.</h3>
-                        <p class="member-title" data-translate="robin_director">Director of the Study Center</p>
-                        <p class="member-title" data-translate="robin_specialty">B.Sc. in Computer Science</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/roberto_perez_rodriguez.png" alt="Roberto Pérez-Rodríguez, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Roberto Pérez Rodríguez, PhD.</h3>
-                        <p class="member-title">Mechanical Engineer</p>
-                        <p class="member-title">Cuban Academy of Sciences</p>
-                        <p class="member-title">Line Coordinator in the Doctoral Program "Development of Engineering"
-                        </p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/yorley_arbella_feliciano.png" alt="Yorley Arbella-Feliciano, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Yorley Arbella-Feliciano, PhD.</h3>
-                        <p class="member-title">Mechanical Engineer</p>
-                        <p class="member-title">Coordinator of the Master's Program in CAD/CAM</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/rolando_esteban_simeon.png" alt="Rolando Esteban Simeón-Monet, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Rolando Esteban Simeón-Monet, PhD.</h3>
-                        <p class="member-title">Mechanical Engineer</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Luis Wilfredo Hernández-González, PhD.</h3>
-                        <p class="member-title">Mechanical Engineer</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/roberto_andres_estrada.png" alt="Roberto Andrés Estrada-Cingualbres, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Roberto Andrés Estrada-Cingualbres, PhD.</h3>
-                        <p class="member-title">Aeronautical Engineer</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/luis_enrique_acosta.png" alt="Luis Enrique Acosta-González, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Luis Enrique Acosta-González, PhD.</h3>
-                        <p class="member-title">Civil Engineer</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/team/anabel_reyes_ramirez.png" alt="Anabel Reyes-Ramírez, PhD.">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Anabel Reyes-Ramírez, PhD.</h3>
-                        <p class="member-title">Civil Engineer</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Libys Martha Zúñiga Igarza, PhD.</h3>
-                        <p class="member-title">Architect</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Odet López Batista, M.Sc.</h3>
-                        <p class="member-title">B.Sc. Mathematics</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Luis Guillermo Rodríguez Velázquez, M.Sc.</h3>
-                        <p class="member-title">Mechanical Engineer</p>
-                        <p class="member-title">PhD Student, "Development of Engineering" Program</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Adrián de la Luz Álvarez</h3>
-                        <p class="member-title">Civil Engineer</p>
-                        <p class="member-title">PhD Student, "Development of Engineering" Program</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Carlos Luis Martínez Fernández</h3>
-                        <p class="member-title">Civil Engineer</p>
-                        <p class="member-title">PhD Student, "Development of Engineering" Program</p>
-                    </div>
+                <div class="team-grid">
+                    <!-- Team members will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -320,193 +208,8 @@
         <div class="container">
             <h2 class="section-title" data-translate="projects_title">Research Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/01.png" alt="STEM">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project1_title">Disruptive Tools for Teaching
-                            Engineering</h3>
-                        <p class="project-description" data-translate="project1_desc">Focused on Energy, the
-                            Environment, and Occupational Safety and Health: A View from the STEM Approach</p>
-                        <div class="project-meta">
-                            <span data-translate="project1_program">Sectorial Program: Higher Education and Sustainable
-                                Development</span>
-                            <span data-translate="project1_period">2024-2026</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/02.png" alt="Energy">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project2_title">Contributions to the Sustainability of
-                            Power Generator Sets</h3>
-                        <p class="project-description" data-translate="project2_desc">Comprehensive diagnosis of the
-                            operation and maintenance process, defining failure causes, and developing maintenance
-                            policies</p>
-                        <div class="project-meta">
-                            <span data-translate="project2_program">Territorial Program: Energy</span>
-                            <span data-translate="project2_period">2023-2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/03.png" alt="Wind">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project3_title">Tropicalization of Wind Turbines</h3>
-                        <p class="project-description" data-translate="project3_desc">Maintenance of cooling systems in
-                            wind turbines, CAE simulation of temperature behavior, and maintenance policy development
-                        </p>
-                        <div class="project-meta">
-                            <span data-translate="project3_program">Territorial Program: Energy</span>
-                            <span data-translate="project3_period">2021-2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/04.png" alt="Solar">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project4_title">Cuban Self-Ballasted Support</h3>
-                        <p class="project-description" data-translate="project4_desc">Self-ballasted photovoltaic park
-                            installations for roofs or ground surfaces, with adjustable mounting design and safety
-                            accessories</p>
-                        <div class="project-meta">
-                            <span data-translate="project4_program">Scientific Technical Service</span>
-                            <span data-translate="project4_period">2023-2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/05.png" alt="Mayari">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project5_title">Controller for the Computer-Assisted
-                            Operation and Maintenance of the Mayarí Power Plant</h3>
-                        <p class="project-description" data-translate="project5_desc">Development of intelligent control
-                            systems for power plant operation and maintenance optimization</p>
-                        <div class="project-meta">
-                            <span data-translate="project5_program">Territorial Program: Energy Transformation of
-                                Holguín Province</span>
-                            <span data-translate="project5_period">2025-2028</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/06.png" alt="InSAR">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project6_title">Vulnerability of Mining Sites to
-                            Subsidence Based on INSAR Technology</h3>
-                        <p class="project-description" data-translate="project6_desc">Analysis and monitoring of mining
-                            areas using Interferometric Synthetic Aperture Radar technology</p>
-                        <div class="project-meta">
-                            <span data-translate="project6_program">National Program: Basic and Natural Sciences</span>
-                            <span data-translate="project6_period">2021-2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/07.png" alt="Geomatic">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project7_title">Geomatics-BIM Integration for
-                            Improving Project Management and Construction Control</h3>
-                        <p class="project-description" data-translate="project7_desc">Integration of geomatics and
-                            Building Information Modeling for enhanced project management</p>
-                        <div class="project-meta">
-                            <span data-translate="project7_program">Sectorial Program: Development of Systems and
-                                Technologies for Investment Optimization</span>
-                            <span data-translate="project7_period">2021-2025</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/08.png" alt="CCA-5000M">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project8_title">Improvement of the CCA-6000
-                            (CCA-5000M) Sugarcane Harvester</h3>
-                        <p class="project-description" data-translate="project8_desc">Enhancement of sugarcane
-                            harvesting machinery for improved efficiency and productivity</p>
-                        <div class="project-meta">
-                            <span data-translate="project8_program">Territorial Program: Industry in Cuba</span>
-                            <span data-translate="project8_period">2025-2028</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/09.png" alt="Lightweight Roofs">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project9_title">Increasing the Structural and Energy
-                            Resilience of Houses with Lightweight Roofs</h3>
-                        <p class="project-description" data-translate="project9_desc">Enhancing resistance of
-                            lightweight roof structures against extreme wind impacts</p>
-                        <div class="project-meta">
-                            <span data-translate="project9_program">Sectorial Program: Integrated Disaster Risk
-                                Reduction in Cuba</span>
-                            <span data-translate="project9_period">2025-2028</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/10.png" alt="Monuments">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project10_title">Impact of Monumental Heritage on
-                            Tourism Development in Municipalities of Holguín</h3>
-                        <p class="project-description" data-translate="project10_desc">Analysis of heritage sites'
-                            contribution to sustainable tourism development in the region</p>
-                        <div class="project-meta">
-                            <span data-translate="project10_program">Territorial Program: Holguín, a Smart and
-                                Sustainable Tourist Destination</span>
-                            <span data-translate="project10_period">2025-2028</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/11.png" alt="Surgical">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project11_title">Transformation of Surgical Practice
-                            through Additive Manufacturing</h3>
-                        <p class="project-description" data-translate="project11_desc">Incorporation of 3D printing
-                            technology in the production of surgical models for pediatric hospital</p>
-                        <div class="project-meta">
-                            <span data-translate="project11_program">Collaboration Project: Research in Science and
-                                Technology for Human Development</span>
-                            <span data-translate="project11_period">2023-2025</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/projects/12.png" alt="AI">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-translate="project12_title">Early Prediction of Motor Progression
-                            in Spinocerebellar Ataxias Using AI</h3>
-                        <p class="project-description" data-translate="project12_desc">Development of artificial
-                            intelligence tools for early prediction of motor progression in neurological disorders</p>
-                        <div class="project-meta">
-                            <span data-translate="project12_program">National Program: Neurosciences and
-                                Neurotechnology</span>
-                            <span data-translate="project12_period">2024-2026</span>
-                        </div>
-                    </div>
+                <div class="projects-grid">
+                    <!-- Projects will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -595,6 +298,11 @@
         </div>
     </footer>
 
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="javascript/data.js"></script>
     <script src="javascript/script.js"></script>
 </body>
 

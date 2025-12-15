@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member Profile - CAD/CAM Study Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; color: white;">
+                    <i class="fas fa-cube fa-2x"></i>
+                    <h1 data-translate="main_title" style="margin-left: 10px;">CAD/CAM Study Center</h1>
+                </a>
+            </div>
+            <div class="header-actions">
+                <div class="language-selector">
+                    <button class="language-btn" id="languageBtn">
+                        <span id="currentLang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-options" id="languageOptions">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="es">Español</a>
+                        <a href="#" data-lang="ru">Русский</a>
+                        <a href="#" data-lang="zh">中文</a>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="index.html" class="home-btn" style="color: white; font-size: 1.2rem; margin-left: 10px;">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <div class="container">
+            <div id="profile-content" class="profile-content">
+                <!-- Content will be loaded dynamically -->
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_about">About Us</h3>
+                    <p data-translate="footer_about_text">CAD/CAM Study Center at the University of Holguín, pioneering
+                        engineering research and education for over 30 years.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p>University of Holguín</p>
+                    <p>Ave. XX Aniversario, Holguín, Cuba</p>
+                    <p>Email: info@cadcam-uho.edu.cu</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_follow">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CAD/CAM Study Center. <span data-translate="footer_rights">All Rights Reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/data.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
