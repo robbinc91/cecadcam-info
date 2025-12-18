@@ -450,6 +450,14 @@ const translations = {
     }
 };
 
+const iconsAndRefs = {
+    email: { icon: "fas fa-envelope", text: "Email" },
+    linkedin: { icon: "fab fa-linkedin", text: "LinkedIn" },
+    googleScholar: { icon: "fas fa-graduation-cap", text: "Google Scholar" },
+    portfolio: { icon: "fas fa-code", text: "Portfolio" },
+    github: { icon: "fab fa-github", text: "Github" }
+};
+
 const teamMembers = [
     {
         id: "robin-cabeza-ruiz",
@@ -461,14 +469,19 @@ const teamMembers = [
         ],
         bioKey: "robin_bio",
         contact: {
-            email: "robin.cabeza@uho.edu.cu",
-            linkedin: "#",
-            googleScholar: "#"
+            email: "robbinc91@gmail.com",
+            linkedin: "https://www.linkedin.com/in/robin-cabeza-ruiz-50575b113/",
+            googleScholar: "https://scholar.google.com/citations?user=MAtFl38AAAAJ&hl",
+            portfolio: "https://robbinc91.github.io/",
+            github: "https://github.com/robbinc91"
         },
         interests: ["CAD/CAM", "Artificial Intelligence", "Educational Technology"],
         publications: [
-            "Publication 1 Title (2024)",
-            "Publication 2 Title (2023)"
+            "Cabeza-Ruiz, R.; Velázquez-Pérez, L.; González-Dalmau, E.; Linares-Barranco, A.; Pérez-Rodríguez, R. Deep Learning-Based Assessment of Brainstem Volume Changes in Spinocerebellar Ataxia Type 2 (SCA2): A Study on Patients and Preclinical Subjects. Sensors 2025, 25, 6009. https://doi.org/10.3390/s25196009",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Linares-Barranco, A., Pérez-Rodríguez, R. (2025). Automated Thalamic Nuclei Segmentation from Brain T1-W MRI Using Convolutional Neural Networks. In: Torres, Y., Beltrán, A.M., Felix, M., Peralta, E., Larios Marín, D.F. (eds) A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85. Springer, Cham. https://doi.org/10.1007/978-3-031-99987-1_43",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Pérez-Rodríguez, R. et al. ConvNets for automatic detection of polyglutamine SCAs from brain MRIs: state of the art applications. Med Biol Eng Comput 61, 1–24 (2023). https://doi.org/10.1007/s11517-022-02714-w",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Linares-Barranco, A., & Pérez-Rodríguez, R. (2022). Convolutional Neural Networks for Segmenting Cerebellar Fissures from Magnetic Resonance Imaging. Sensors, 22(4), 1345. https://doi.org/10.3390/s22041345",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Pérez-Rodríguez, R. (2021). Convolutional Neural Networks as Support Tools for Spinocerebellar Ataxia Detection from Magnetic Resonances. In: Hernández Heredia, Y., Milián Núñez, V., Ruiz Shulcloper, J. (eds) Progress in Artificial Intelligence and Pattern Recognition. IWAIPR 2021. Lecture Notes in Computer Science(), vol 13055. Springer, Cham. https://doi.org/10.1007/978-3-030-89691-1_11"
         ]
     },
     {

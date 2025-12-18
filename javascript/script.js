@@ -70,9 +70,8 @@ function renderProfile() {
 
     const contactHtml = `
         <div class="contact-links">
-            ${member.contact.email ? `<a href="mailto:${member.contact.email}" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>` : ''}
-            ${member.contact.linkedin && member.contact.linkedin !== '#' ? `<a href="${member.contact.linkedin}" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>` : ''}
-            ${member.contact.googleScholar && member.contact.googleScholar !== '#' ? `<a href="${member.contact.googleScholar}" target="_blank" class="contact-btn"><i class="fas fa-graduation-cap"></i> Google Scholar</a>` : ''}
+            ${Object.keys(member.contact).filter(key => member.contact[key] !== '#').map(el =>
+        `<a href="${el === 'email' ? 'mailto:' : ''}${member.contact[el]}" class="contact-btn"><i class="${iconsAndRefs[el].icon}"></i> ${iconsAndRefs[el].text}</a>`).join('')}
         </div>
     `;
 
