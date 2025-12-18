@@ -477,3 +477,141 @@ if (backToTopBtn) {
         });
     });
 }
+
+
+// Enhanced mobile menu functionality
+
+
+if (mobileMenuBtn && mainNav) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mainNav.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+
+        if (mainNav.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                mainNav.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (mainNav.classList.contains('active') &&
+            !mainNav.contains(e.target) &&
+            !mobileMenuBtn.contains(e.target)) {
+            mainNav.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            mainNav.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
+// More menu dropdown functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const moreBtn = document.querySelector('.more-btn');
+    const moreDropdown = document.querySelector('.more-dropdown');
+
+    if (moreBtn && moreDropdown) {
+        // Toggle dropdown on click
+        moreBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            moreDropdown.style.display = moreDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function () {
+            moreDropdown.style.display = 'none';
+        });
+
+        // Keep dropdown open when clicking inside it
+        moreDropdown.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+        // Close dropdown on window resize if it becomes desktop
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 767) {
+                moreDropdown.style.display = 'none';
+            }
+        });
+    }
+});
+
+// Hierarchical dropdown menu functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+    dropdownMenus.forEach(menu => {
+        const trigger = menu.querySelector('.menu-trigger');
+        const dropdown = menu.querySelector('.dropdown');
+
+        // Mobile click functionality
+        if (window.innerWidth <= 767) {
+            trigger.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Close other open dropdowns
+                dropdownMenus.forEach(otherMenu => {
+                    if (otherMenu !== menu) {
+                        otherMenu.classList.remove('active');
+                    }
+                });
+
+                menu.classList.toggle('active');
+            });
+        }
+
+        // Desktop hover functionality
+        else {
+            menu.addEventListener('mouseenter', function () {
+                menu.classList.add('active');
+            });
+
+            menu.addEventListener('mouseleave', function () {
+                menu.classList.remove('active');
+            });
+        }
+    });
+
+    // Close all dropdowns when clicking outside
+    document.addEventListener('click', function () {
+        dropdownMenus.forEach(menu => {
+            menu.classList.remove('active');
+        });
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function () {
+        dropdownMenus.forEach(menu => {
+            menu.classList.remove('active');
+        });
+    });
+});

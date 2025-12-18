@@ -1,6 +1,9 @@
 // Language translations
 const translations = {
     en: {
+        nav_about_menu: "About",
+        nav_research_menu: "Research",
+        nav_results_menu: "Results",
         nav_publications: "Publications",
         nav_events: "Event Participation",
         publications_title: "Publications",
@@ -129,6 +132,9 @@ const translations = {
         generic_bio: "A dedicated member of the CAD/CAM Study Center team, contributing to research and development."
     },
     es: {
+        nav_about_menu: "Acerca de",
+        nav_research_menu: "Investigación",
+        nav_results_menu: "Resultados",
         nav_publications: "Publicaciones",
         nav_events: "Participación en Eventos",
         publications_title: "Publicaciones",
@@ -257,6 +263,9 @@ const translations = {
         generic_bio: "Un miembro dedicado del equipo del Centro de Estudios CAD/CAM."
     },
     ru: {
+        nav_about_menu: "О нас",
+        nav_research_menu: "Исследования",
+        nav_results_menu: "Результаты",
         nav_publications: "Публикации",
         nav_events: "Участие в Мероприятиях",
         publications_title: "Публикации",
@@ -275,7 +284,7 @@ const translations = {
         presentation_authors: "Авторы",
         robin_director: "Director of the Study Center",
         robin_specialty: "B.Sc. in Computer Science",
-        main_title: "CAD/CAM Study Center",
+        main_title: "Учебный центр CAD/CAM",
         nav_about: "О нас",
         nav_mission: "Миссия",
         nav_programs: "Программы",
@@ -385,6 +394,9 @@ const translations = {
         generic_bio: "Преданный своему делу сотрудник Центра исследований CAD/CAM."
     },
     zh: {
+        nav_about_menu: "关于我们",
+        nav_research_menu: "研究",
+        nav_results_menu: "成果",
         nav_publications: "出版物",
         nav_events: "活动参与",
         publications_title: "出版物",
@@ -403,7 +415,7 @@ const translations = {
         presentation_authors: "作者",
         robin_director: "Director of the Study Center",
         robin_specialty: "B.Sc. in Computer Science",
-        main_title: "CAD/CAM Study Center",
+        main_title: "CAD/CAM 研究中心",
         nav_about: "关于我们",
         nav_mission: "使命",
         nav_programs: "项目",

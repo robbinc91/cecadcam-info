@@ -16,22 +16,42 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <i class="fas fa-cube fa-2x"></i>
-                <h1 data-translate="main_title">CAD/CAM Study Center</h1>
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; color: white;">
+                    <i class="fas fa-cube fa-2x"></i>
+                    <h1 data-translate="main_title" style="margin-left: 10px;">CAD/CAM Study Center</h1>
+                </a>
             </div>
-            <nav>
+
+            <!-- Updated navigation with better mobile support -->
+            <nav id="mainNav">
                 <ul>
-                    <li><a href="#about" data-translate="nav_about">About</a></li>
-                    <li><a href="#mission" data-translate="nav_mission">Mission</a></li>
-                    <li><a href="#programs" data-translate="nav_programs">Programs</a></li>
-                    <li><a href="#team" data-translate="nav_team">Team</a></li>
-                    <li><a href="#research" data-translate="nav_research">Research</a></li>
-                    <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
-                    <li><a href="#collaborations" data-translate="nav_collaborations">Collaborations</a></li>
-                    <li><a href="publications.html" data-translate="nav_publications">Publications</a></li>
-                    <li><a href="events.html" data-translate="nav_events">Event Participation</a></li>
+                    <li class="dropdown-menu">
+                        <a href="#" class="menu-trigger">About <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="index.html" data-translate="nav_about">About Us</a>
+                            <a href="index.html#mission" data-translate="nav_mission">Mission</a>
+                            <a href="index.html#team" data-translate="nav_team">Team</a>
+                            <a href="index.html#programs" data-translate="nav_programs">Programs</a>
+                            <a href="index.html#collaborations" data-translate="nav_collaborations">Collaborations</a>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#" class="menu-trigger">Research <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="index.html#research" data-translate="nav_research">Research</a>
+                            <a href="index.html#projects" data-translate="nav_projects">Projects</a>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#" class="menu-trigger">Results <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="publications.html" data-translate="nav_publications">Publications</a>
+                            <a href="events.html" data-translate="nav_events">Events</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
+
             <div class="header-actions">
                 <div class="language-selector">
                     <button class="language-btn" id="languageBtn">
@@ -48,6 +68,9 @@
                 <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon"></i>
                 </button>
+                <a href="index.html" class="home-btn" style="color: white; font-size: 1.2rem;">
+                    <i class="fas fa-home"></i>
+                </a>
                 <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Menu">
                     <i class="fas fa-bars"></i>
                 </button>
