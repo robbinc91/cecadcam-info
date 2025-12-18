@@ -137,10 +137,177 @@ function renderProjects() {
     }).join('');
 }
 
+// Add these functions to script.js
+// Render ALL Publications
+function renderPublications() {
+    const publicationsContent = document.getElementById('publications-content');
+    if (!publicationsContent) return;
+
+    let html = '';
+
+    // Research Group I Publications (ALL 4 SCOPUS publications)
+    html += '<div class="publications-group" data-group="group-I">';
+    html += '<h3 data-translate="research_group_I">Research Group I Publications (SCOPUS Indexed)</h3>';
+    html += '<div class="publications-list">';
+
+    publications2025.groupI.forEach(pub => {
+        html += `
+            <div class="publication-card" data-type="${pub.type}" data-scopus="${pub.scopus}">
+                <div class="publication-header">
+                    <span class="publication-type">${pub.type}</span>
+                    ${pub.scopus ? '<span class="scopus-badge">SCOPUS</span>' : ''}
+                </div>
+                <h4 class="publication-title">${pub.title}</h4>
+                <p class="publication-authors">${pub.authors}</p>
+                <p class="publication-journal">${pub.journal}</p>
+                <p class="publication-volume">${pub.volume}</p>
+                ${pub.doi ? `<a href="${pub.doi}" class="publication-doi" target="_blank">DOI: ${pub.doi}</a>` : ''}
+            </div>
+        `;
+    });
+    html += '</div></div>';
+
+    // Research Group II Publications (ALL 1 publication)
+    html += '<div class="publications-group" data-group="group-II">';
+    html += '<h3 data-translate="research_group_II">Research Group II Publications</h3>';
+    html += '<div class="publications-list">';
+
+    publications2025.groupII.forEach(pub => {
+        html += `
+            <div class="publication-card" data-type="${pub.type}">
+                <div class="publication-header">
+                    <span class="publication-type">${pub.type}</span>
+                </div>
+                <h4 class="publication-title">${pub.title}</h4>
+                <p class="publication-authors">${pub.authors}</p>
+                <p class="publication-journal">${pub.journal}</p>
+                <p class="publication-volume">${pub.volume}</p>
+                ${pub.doi ? `<a href="${pub.doi}" class="publication-doi" target="_blank">DOI: ${pub.doi}</a>` : ''}
+            </div>
+        `;
+    });
+    html += '</div></div>';
+
+    // Research Group III Publications (ALL 4 publications)
+    html += '<div class="publications-group" data-group="group-III">';
+    html += '<h3 data-translate="research_group_III">Research Group III Publications</h3>';
+    html += '<div class="publications-list">';
+
+    publications2025.groupIII.forEach(pub => {
+        html += `
+            <div class="publication-card" data-type="${pub.type}">
+                <div class="publication-header">
+                    <span class="publication-type">${pub.type}</span>
+                </div>
+                <h4 class="publication-title">${pub.title}</h4>
+                <p class="publication-authors">${pub.authors}</p>
+                <p class="publication-journal">${pub.journal}</p>
+                <p class="publication-volume">${pub.volume}</p>
+                ${pub.doi ? `<a href="${pub.doi}" class="publication-doi" target="_blank">DOI: ${pub.doi}</a>` : ''}
+            </div>
+        `;
+    });
+    html += '</div></div>';
+
+    // ALL 15 Book Chapters
+    html += '<div class="publications-group" data-group="book-chapters">';
+    html += '<h3 data-translate="book_chapters">Book Chapters (Springer Proceedings)</h3>';
+    html += '<div class="publications-list">';
+
+    publications2025.bookChapters.forEach(chapter => {
+        html += `
+            <div class="publication-card" data-type="${chapter.type}" data-scopus="${chapter.scopus}">
+                <div class="publication-header">
+                    <span class="publication-type">Book Chapter</span>
+                    ${chapter.scopus ? '<span class="scopus-badge">SCOPUS</span>' : ''}
+                </div>
+                <h4 class="publication-title">${chapter.title}</h4>
+                <p class="publication-authors">${chapter.authors}</p>
+                <p class="publication-book">${chapter.book}</p>
+                <a href="${chapter.doi}" class="publication-doi" target="_blank">DOI: ${chapter.doi}</a>
+            </div>
+        `;
+    });
+    html += '</div></div>';
+
+    publicationsContent.innerHTML = html;
+}
+
+// Render ALL Events
+function renderEvents() {
+    const eventsContent = document.getElementById('events-content');
+    if (!eventsContent) return;
+
+    let html = '';
+
+    // ALL 8 conferences with ALL 54 presentations
+    events2025.forEach(event => {
+        html += `
+            <div class="event-card">
+                <div class="event-header">
+                    <h3 class="event-name">${event.name}</h3>
+                    <div class="event-meta">
+                        <span class="event-date"><i class="fas fa-calendar"></i> ${event.date}</span>
+                        <span class="event-location"><i class="fas fa-map-marker-alt"></i> ${event.location}</span>
+                        <span class="event-presentations"><i class="fas fa-presentation"></i> ${event.presentations} presentations</span>
+                        ${event.isbn ? `<span class="event-isbn"><i class="fas fa-book"></i> ${event.isbn}</span>` : ''}
+                    </div>
+                </div>
+                <div class="event-papers">
+                    <h4>Presentations:</h4>
+                    <div class="papers-list">
+        `;
+
+        // ALL presentations for each conference
+        event.papers.forEach(paper => {
+            html += `
+                <div class="paper-item">
+                    <h5 class="paper-title">${paper.title}</h5>
+                    <p class="paper-authors">
+                        <strong>Authors:</strong> ${paper.authors.join(', ')}
+                    </p>
+                    ${paper.workshop ? `<p class="paper-workshop"><strong>Workshop:</strong> ${paper.workshop}</p>` : ''}
+                </div>
+            `;
+        });
+
+        // Keynotes if present
+        if (event.keynotes) {
+            html += `
+                <div class="keynotes-section">
+                    <h4>Keynote Presentations:</h4>
+            `;
+            event.keynotes.forEach(keynote => {
+                html += `
+                    <div class="paper-item keynote">
+                        <h5 class="paper-title">${keynote.title}</h5>
+                        <p class="paper-authors">
+                            <strong>Author:</strong> ${keynote.author}
+                        </p>
+                        <p class="keynote-type">${keynote.type}</p>
+                    </div>
+                `;
+            });
+            html += '</div>';
+        }
+
+        html += `
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    eventsContent.innerHTML = html;
+}
+
+
 // Initial Render
 renderTeam();
 renderProjects();
 renderProfile();
+renderPublications();
+renderEvents();
 
 // DOM elements
 const languageBtn = document.getElementById('languageBtn');

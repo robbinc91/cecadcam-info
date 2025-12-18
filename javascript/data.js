@@ -1,6 +1,22 @@
 // Language translations
 const translations = {
     en: {
+        nav_publications: "Publications",
+        nav_events: "Event Participation",
+        publications_title: "Publications",
+        events_title: "Event Participation",
+        research_group_I: "Research Group I",
+        research_group_II: "Research Group II",
+        research_group_III: "Research Group III",
+        journal_articles: "Journal Articles",
+        book_chapters: "Book Chapters",
+        scopus_indexed: "SCOPUS Indexed",
+        publications_2025: "2025 Publications",
+        event_participation: "Event Participation",
+        conferences_2025: "2025 Conferences",
+        presentations_count: "Presentations",
+        conference_details: "Conference Details",
+        presentation_authors: "Authors",
         robin_director: "Director of the Study Center",
         robin_specialty: "B.Sc. in Computer Science",
         main_title: "CAD/CAM Study Center",
@@ -113,6 +129,22 @@ const translations = {
         generic_bio: "A dedicated member of the CAD/CAM Study Center team, contributing to research and development."
     },
     es: {
+        nav_publications: "Publicaciones",
+        nav_events: "Participación en Eventos",
+        publications_title: "Publicaciones",
+        events_title: "Participación en Eventos",
+        research_group_I: "Grupo de Investigación I",
+        research_group_II: "Grupo de Investigación II",
+        research_group_III: "Grupo de Investigación III",
+        journal_articles: "Artículos de Revista",
+        book_chapters: "Capítulos de Libro",
+        scopus_indexed: "Indexado en SCOPUS",
+        publications_2025: "Publicaciones 2025",
+        event_participation: "Participación en Eventos",
+        conferences_2025: "Conferencias 2025",
+        presentations_count: "Presentaciones",
+        conference_details: "Detalles de la Conferencia",
+        presentation_authors: "Autores",
         robin_director: "Director del Centro de Estudios",
         robin_specialty: "Lic. en Ciencias de la Computación",
         main_title: "Centro de Estudios CAD/CAM",
@@ -225,6 +257,22 @@ const translations = {
         generic_bio: "Un miembro dedicado del equipo del Centro de Estudios CAD/CAM."
     },
     ru: {
+        nav_publications: "Публикации",
+        nav_events: "Участие в Мероприятиях",
+        publications_title: "Публикации",
+        events_title: "Участие в Мероприятиях",
+        research_group_I: "Исследовательская группа I",
+        research_group_II: "Исследовательская группа II",
+        research_group_III: "Исследовательская группа III",
+        journal_articles: "Статьи в Журналах",
+        book_chapters: "Главы в Книгах",
+        scopus_indexed: "Индексировано в SCOPUS",
+        publications_2025: "Публикации 2025",
+        event_participation: "Участие в Мероприятиях",
+        conferences_2025: "Конференции 2025",
+        presentations_count: "Доклады",
+        conference_details: "Детали Конференции",
+        presentation_authors: "Авторы",
         robin_director: "Director of the Study Center",
         robin_specialty: "B.Sc. in Computer Science",
         main_title: "CAD/CAM Study Center",
@@ -337,6 +385,22 @@ const translations = {
         generic_bio: "Преданный своему делу сотрудник Центра исследований CAD/CAM."
     },
     zh: {
+        nav_publications: "出版物",
+        nav_events: "活动参与",
+        publications_title: "出版物",
+        events_title: "活动参与",
+        research_group_I: "研究小组 I",
+        research_group_II: "研究小组 II",
+        research_group_III: "研究小组 III",
+        journal_articles: "期刊文章",
+        book_chapters: "书籍章节",
+        scopus_indexed: "SCOPUS 收录",
+        publications_2025: "2025年出版物",
+        event_participation: "活动参与",
+        conferences_2025: "2025年会议",
+        presentations_count: "报告次数",
+        conference_details: "会议详情",
+        presentation_authors: "作者",
         robin_director: "Director of the Study Center",
         robin_specialty: "B.Sc. in Computer Science",
         main_title: "CAD/CAM Study Center",
@@ -732,5 +796,523 @@ const projects = [
         descKey: "project12_desc",
         programKey: "project12_program",
         periodKey: "project12_period"
+    }
+];
+
+
+// COMPLETE PUBLICATIONS 2025 - ALL 24 PUBLICATIONS
+const publications2025 = {
+    groupI: [
+        {
+            title: "Intelligent predictive maintenance: a bibliometric approach through the SCOPUS database",
+            authors: "Torres-Sainz, R; de-Zayas-Pérez, M. R; Trinchet-Varela, C. A; Pérez-Vallejo, L. M. y Pérez Rodríguez, R.",
+            journal: "Bibliotecas. Anales de Investigacion",
+            volume: "21(1), 1-15",
+            doi: "http://revistas.bnjm.sld.cu/index.php/BAI/article/view/958",
+            scopus: true,
+            type: "journal"
+        },
+        {
+            title: "Deep Learning-Based Assessment of Brainstem Volume Changes in Spinocerebellar Ataxia Type 2 (SCA2): A Study on Patients and Preclinical Subjects",
+            authors: "Cabeza-Ruiz, R., Velázquez-Pérez, L., González-Dalmau, E., Linares-Barranco, A., Pérez-Rodríguez, R.",
+            journal: "Sensors",
+            volume: "25(19), 6009",
+            doi: "https://doi.org/10.3390/s25196009",
+            scopus: true,
+            type: "journal"
+        },
+        {
+            title: "Process approach in the configuration of a construction project for the conservation of the Weenhayek native people",
+            authors: "Rojas-Molina JM, Zúñiga-Igarza LM, Pérez-Campdesuñer R, Alexander Sánchez-Rodríguez, Gelmar García-Vidal, Rodobaldo Martínez-Vivar",
+            journal: "Journal of Infrastructure, Policy and Development",
+            volume: "9(1): 10588",
+            doi: "https://doi.org/10.24294/jipd10588",
+            scopus: true,
+            type: "journal"
+        },
+        {
+            title: "Displacements study of a dam using low-cost GNSS receivers, high precision leveling and Finite Element Model",
+            authors: "Rosendo Romero-Andrade, Manuel Edwiges Trejo-Soto, Luis Enrique Acosta-González, Daniel Hernández-Andrade, Karan Nayak, Vivian Hernández-Columble, Richard Serrano-Agila; Yedid Guadalupe Zambrano-Medina",
+            journal: "Advances in Geodesy and Geoinformation",
+            volume: "Vol. 73, no. 2, article no. e55, 2024",
+            doi: "https://doi.org/10.24425/agg.2024.150684",
+            scopus: true,
+            type: "journal"
+        }
+    ],
+    groupII: [
+        {
+            title: "Determinación de subsidencia del terreno mediante tecnología InSAR. Caso de estudio: Vía San Antonio-San Vicente",
+            authors: "Peralta-Delgado, Jaime Adrián; Acosta-González, Luis Enrique; Vega-Ponce, Emil Cristhian; Herrera-Blanco, Walkis; Pacheco-Gil, Henry Antonio",
+            journal: "Min. Geol.",
+            volume: "vol.41, no.1, p.51-67",
+            doi: "",
+            scopus: false,
+            type: "journal"
+        }
+    ],
+    groupIII: [
+        {
+            title: "Validez de un procedimiento para la gestión del riesgo económico en inversiones constructivas, Cuba",
+            authors: "Dotres Z., Gregorio Garciandia M., Norma Sánchez P., Libys M., Zúñiga I., Reyner Pérez C., y Juan Marco Roja M.",
+            journal: "Revista Científica Esteli",
+            volume: "14, 53, Enero-marzo, pp 112-129",
+            doi: "https://doi.org/10.5377/esteli.v14i53.20330",
+            scopus: false,
+            type: "journal"
+        },
+        {
+            title: "Educación Económica con Enfoque Profesional del Trabajador Competente a Directivos",
+            authors: "Guerra, Y.; Dotres, S.; Zúñiga, L.; Ramírez, D.",
+            journal: "Revista Científica Mundo Recursivo",
+            volume: "8(1), 1-20",
+            doi: "https://www.atlantic.edu.ec/ojs/index.php/mundor/article/view/233/336",
+            scopus: false,
+            type: "journal"
+        },
+        {
+            title: "El Proceso de Formación Profesional desde el Desarrollo de Competencias para la Gestión de Riesgos en Empresas Constructoras",
+            authors: "Ramírez. D.; Dotres, S.; Zúñiga, L.; Guerra, Y.",
+            journal: "Revista Científica Mundo Recursivo",
+            volume: "8(1), 21-43",
+            doi: "https://www.atlantic.edu.ec/ojs/index.php/mundor/article/view/234",
+            scopus: false,
+            type: "journal"
+        },
+        {
+            title: "Resultados: Educación Ambiental con Enfoque Profesional en la Unidad Educativa Tiguino, Coca de Orellana. Ecuador",
+            authors: "Rodríguez, N.; Zúñiga, L.; Cruz, M.; Dotres, S.",
+            journal: "Revista Científica Mundo Recursivo",
+            volume: "8(1), 44-66",
+            doi: "https://www.atlantic.edu.ec/ojs/index.php/mundor/article/view/236/338",
+            scopus: false,
+            type: "journal"
+        }
+    ],
+    bookChapters: [
+        {
+            title: "Optimization of the parameters for the cutting regime in the sustainable turning of AISI 316L steel, based on the NSAG-II and NSAG-III multi-criteria work scheme",
+            authors: "José Antonio Yarza Acuña, Hioxanis Castillo Pantoja, Alexis Cordovés García, Roberto Pérez Rodríguez, Ricardo Lorenzo Avila Rondon",
+            book: "The International Journal of Advanced Manufacturing Technology",
+            doi: "https://doi.org/10.1007/s00170-025-16358-1",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Toxicological Evaluation of Anti-Inflammatory Biological Active Compound Based-On Mirabilis Jalapa",
+            authors: "de Cádiz Agüero, A.T.G., Fernández, K.E.G., Rodríguez, A.M., Rojas, P.A.D., Pérez-Rodríguez, R., Testé, I.S.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3031-99987-1_5",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "The Integration of CAD/CAM/CAE Tools into the Engineering Curriculum",
+            authors: "Ramírez, A.R., Martin, R.L., Lopéz, M.H.R., Pérez-Rodríguez, R.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3031-99987-1_6",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Behavior of a Ceramic Tool in the Dry Machining of a Ti6Al7Nb Alloy and 316L Steel",
+            authors: "del Risco-Alfonso, R., Pérez-Rodriguez, R., del Carmen Zambrano-Robledo, P., Quiza, R., Rivas-Santana, M.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_7",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Simulation of Wind Loads in a Self-ballasted Photovoltaic System by Means of CFD",
+            authors: "Simeón-Monet, R.E., Borrero-Neninger, J.C., Simeón-Pérez, R.E.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_8",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "A Framework to Support the Integration of Technical Collector Networks into the Conceptual Design of Urban Development Projects",
+            authors: "Benítez-Díaz, O., Pérez-Rodriguez, R., Zúñiga-Igarza, L.M., Peralta-Alvarez, M.E.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_9",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Application of Nanotechnology in the Obtaining and Characterization of Aluminum Briquettes",
+            authors: "Morales, E.R., Medina, E.E.N., Feliciano, Y.A., Rodriguez, R.P., Pérez, J.R.H.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_10",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Calculation of a Short Span Lifting Beam 'Plate Style' for Boiler Drum Lifting in Thermoelectric Company",
+            authors: "Dubras, H.C., Pazos, F.J.C., Cingualores, R.A.E., Llanes, R.V., Brito, L.A.C.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_15",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "A STEM Approach to Content Analysis Based on Abstracts from Scopus: The Case of Biomarkers",
+            authors: "Cruz-Ramírez, M., Pérez-Rodriguez, R., Velázquez-Pérez, L.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_35",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Quenching of the AISI D2 Steel with Air Centrifugation Cooling: Microstructure, Hardness, and Wear Resistance Analysis",
+            authors: "Gurri Villafruela, G., Domínguez, A.G., Feliciano, Y.A., Rodriguez, R.P., Morales, E.R.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_39",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Development of Educational 4.0 Environments Through the Dynamic Integration of Natural (Human) and Artificial Intelligences",
+            authors: "Lorenzo, R., Sagula, J.E., Zayas-Figueras, E.E., Quishpe-Solano, R., Pérez-Rodriguez, R.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_40",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Estimation of Gaps Associated with Risk Factors in the Total Cost of Construction Investments",
+            authors: "Zúñiga, S.D., Paz, N.S., Mirón, G.G., Molina, J.M.R., Zúñiga-Igarza, L.M., Campdesuñer, R.F.P.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_41",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Specific Energy Consumption During the Melting of Recycled Aluminum Briquettes as a Function of Geometry and Its Distribution in the Furnace",
+            authors: "Morales, E.R., medina, E.E.N., Feliciano, Y.A., Rodríguez, R.P., Pérez, J.R.H.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_42",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Automated Thalamic Nuclei Segmentation from Brain T1-W MRI Using Convolutional Neural Networks",
+            authors: "Cabeza-Ruiz, R., Velázquez-Pérez, L., Linares-Barranco, A., Pérez-Rodríguez, R.",
+            book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_43",
+            scopus: true,
+            type: "book chapter"
+        },
+        {
+            title: "Thermal Behavior Analysis in Wind Turbines Using Statistical Methods and Artificial Intelligence Techniques",
+            authors: "Leandro L. Lorente-Leyva, Roberto Pérez-Rodríguez, Yorley Arbella-Feliciano and Diego H. Peluffo-Ordóñez",
+            book: "Springer",
+            doi: "https://doi.org/10.1007/978-3-032-07175-0_5",
+            scopus: true,
+            type: "book chapter"
+        }
+    ]
+};
+
+// COMPLETE EVENTS 2025 - ALL 54 PRESENTATIONS
+const events2025 = [
+    {
+        name: "Conferencia Científica Internacional de la Universidad de Holguín",
+        date: "April 2025",
+        location: "University of Holguín, Cuba",
+        presentations: 23,
+        isbn: "ISBN 978-959-7263-99-9",
+        papers: [
+            {
+                title: "Diagnóstico del Estado Actual de La Metodología BIM en la Gestión de Proyectos en Empresas de la construcción de Holguín",
+                authors: ["Luis Enrique Acosta González", "Anabel Reyes Ramírez", "Liset Estopiñan Mulet"]
+            },
+            {
+                title: "Detección de Interferencias en el Modelo 3D de una Edificación mediante el Software BIM Navisworks",
+                authors: ["Anabel Reyes Ramírez", "Luis Enrique Acosta González", "Amalia Margarita La O Martínez"]
+            },
+            {
+                title: "Aplicación de la Tecnología INSAR para la Obtención de Modelos Digitales de Elevación (MDE)",
+                authors: ["Anabel Reyes Ramírez", "Luis Enrique Acosta González", "Antonio David Molina Ramírez"]
+            },
+            {
+                title: "Modelación Geométrica de Edificaciones Patrimoniales con Empleo de Topografía de Alta Definición",
+                authors: ["Juan Antonio Mulet Naranjo", "Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva"]
+            },
+            {
+                title: "Contribución de La Topografía de Alta Definición al Diagnóstico del Estado Geométrico de Elementos Constructivos",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Análisis bibliométrico sobre la modelación ionosférica derivada de observaciones GNSS",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Monitoreo de la actividad geodinámica local reciente con empleo del sistema global de navegación por satélite (GNSS)",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Análisis resistivo de tipologías de estructuras soportes de cubiertas ligeras con empleo de herramientas computacionales",
+                authors: ["Carlos Luis Martínez Fernández", "Roberto Andrés Estrada Cingüalbres", "Anabel Reyes Ramírez"]
+            },
+            {
+                title: "Evaluación computacional de escenarios de riesgo ante fuertes vientos para edificaciones con cubiertas ligeras",
+                authors: ["Liliana Angulo Batista", "Anabel Reyes Ramírez", "Roberto Andrés Estrada Cingüalbres"]
+            },
+            {
+                title: "Base de Datos de los monumentos en el municipio Holguín",
+                authors: ["Robin Cabeza Ruiz", "Anabel Reyes Ramírez", "Yorley Arbella Feliciano"]
+            },
+            {
+                title: "Resiliencia y economía circular. ¿Cómo enfrentarla?",
+                authors: ["Libys Martha Zúñiga Igarza", "Silvia Dotres Zúñiga", "Jorge Luis Rodríguez Gomez"]
+            },
+            {
+                title: "Evaluación del flujo informativo en el proceso constructivo de una obra constructiva",
+                authors: ["Darlana Liz Hernández Sondón", "Irma Clara Sondón González", "Libys Marta Zúñiga Igarza"]
+            },
+            {
+                title: "Formación de la competencia profesional trabajos básicos de ingeniería. Fundamentos teóricos",
+                authors: ["Roberto Miguel Rodríguez Benítez", "Miguel Alejandro Cruz Cabezas", "Libys Martha Zúñiga Igarza"]
+            },
+            {
+                title: "Gestión ambiental de playas turísticas basada en capacidad de carga. Costa norte de Holguín",
+                authors: ["Jorge Luis Rodríguez Gómez", "Libys Martha Zúñiga Igarza", "Ridel Rodríguez Paneque"]
+            },
+            {
+                title: "Competencias laborales y uso de las TIC en la Empresa Inmobiliaria del turismo, Holguín",
+                authors: ["Jorge Luis Rodríguez Gómez", "Freddy Rafael Sarmiento Torres", "Libys Martha Zúñiga Igarza"]
+            },
+            {
+                title: "Modelación matemática del comportamiento termodinámico de la PCHE Mayarí",
+                authors: ["Robin Cabeza Ruiz", "Roberto Johan Sierra Pérez", "Yorley Arbella Feliciano"]
+            },
+            {
+                title: "Gestión del proyecto Diseño autómata para la PCHE Mayarí",
+                authors: ["Lizandra Salazar Pérez", "Roberto Pérez Rodríguez", "Yorley Arbella Feliciano"]
+            },
+            {
+                title: "Modelación geométrica de las Zonas técnicas de la PCHE Mayarí",
+                authors: ["Robin Cabeza Ruiz", "Roberto Johan Sierra Pérez", "Yorley Arbella Feliciano"]
+            },
+            {
+                title: "Simulación numérica del comportamiento de la humedad relativa de la PCHE Mayarí",
+                authors: ["Roberto Pérez Rodríguez", "Robin Cabeza Ruiz", "Lizandra Salazar Pérez"]
+            },
+            {
+                title: "Deep learning-based assessment of brainstem volume changes in spinocerebellar ataxia type 2 (SCA2): a study on patients and preclinical subjects",
+                authors: ["Robin Cabeza Ruiz", "Luis C. Velázquez Pérez", "Alejandro Linares-Barranco", "Roberto Pérez-Rodríguez"]
+            },
+            {
+                title: "Smartphone-based tool for remote capture of the SARA test in patients with SCA2",
+                authors: ["Rafael Mario Carballosa Hernández", "Roberto Pérez-Rodríguez", "Luis C. Velázquez Pérez", "Julio César Rodríguez Díaz"]
+            },
+            {
+                title: "Identification of kinematic variables in the heel-shin-knee test in patients with spinocerebellar ataxia type 2 (SCA2) using smartphones",
+                authors: ["Odet Lopez-Batista", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez-Rodríguez"]
+            },
+            {
+                title: "Determination of kinematic variables from the rapid alternating movement test in patients with spinocerebellar ataxia type 2 (SCA2) based-on smartphone",
+                authors: ["Alfredo Vega Ramírez", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez-Rodríguez"]
+            }
+        ]
+    },
+    {
+        name: "FORMER. IV Simposio de Género y Energía renovable y 1era Convención Internacional de Energía y nuevas tecnologías e Innovación para el Desarrollo Sostenible ENERGY-TID",
+        date: "May 2025",
+        location: "Cuba",
+        presentations: 9,
+        papers: [
+            {
+                title: "Herramienta para la evaluación de vulnerabilidad en la gestión del diseño de cubiertas ligeras",
+                authors: ["Anabel Reyes Ramírez", "Libys Martha Zúñiga Igarza", "Raul Emilio Cruz García"]
+            },
+            {
+                title: "Diseño de plataforma basada en SIG para el monitoreo de la SCA2 en Holguín",
+                authors: ["Anabel Reyes Ramírez", "Luis Enrique Acosta González", "Ernesto Emilio Aguilar Leyva"]
+            },
+            {
+                title: "Controlador automático para la operación del sistema de ventilación de la PCHE Mayarí",
+                authors: ["Erlan Vega Quiala", "Lizandra Salazar Pérez", "Yorley Arbella Feliciano"]
+            },
+            {
+                title: "Simulación numérica del comportamiento de la humedad relativa de la PCHE Mayarí",
+                authors: ["Yorley Arbella Feliciano", "Lizandra Salazar Pérez", "Roberto Johan Sierra Pérez"]
+            },
+            {
+                title: "Quantitative analysis of rapid alternating movements in SCA2 using video processing and AI algorithms: pipeline for automated measurement of biomechanical parameters",
+                authors: ["Alfredo Vega Ramírez", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez Rodríguez"]
+            },
+            {
+                title: "The brain MRI segmentation using the atlas framework focused on the SCA2 diagnosis: a rapid review",
+                authors: ["Lis Mariela Segura Vargas", "Robin Cabeza Ruiz", "Luis Velázquez Pérez", "Roberto Pérez Rodríguez"]
+            },
+            {
+                title: "Early detection of motor impairment in SCA2 with AI: quantitative analysis of trajectories and corrections in the heel-knee-shin test",
+                authors: ["Odet Lopez Batista", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez Rodríguez"]
+            },
+            {
+                title: "Using MBSE to model the kinematic variables of gait and posture in patients with SCA2",
+                authors: ["Roberto Pérez Rodríguez", "Roberto Rodríguez Labrada", "Luis Velázquez Pérez"]
+            },
+            {
+                title: "Data-mix module enhances the use of multi-modal imaging data for thalamic nuclei segmentation",
+                authors: ["Robin Cabeza Ruiz", "Luis Velázquez Pérez", "Evelio González Dalmau", "Roberto Pérez Rodríguez"]
+            }
+        ]
+    },
+    {
+        name: "EXPOCIENCIA",
+        date: "May 2025",
+        location: "Cuba",
+        presentations: 2,
+        papers: [
+            {
+                title: "Experiencias en la Utilización de Modelos Computacionales en la Gestión de Riesgo Ante Desastres",
+                authors: ["Anabel Reyes Ramírez"],
+                workshop: "Taller: Metas y resultados con valor agregado por la ciencia, tecnología e innovación"
+            },
+            {
+                title: "Herramientas de IA para la segmentación de imágenes de resonancia magnética",
+                authors: ["Robin Cabeza Ruiz"],
+                workshop: "Taller: Inteligencia Artificial y Futuro compartido: la tecnología al servicio de la sociedad"
+            }
+        ]
+    },
+    {
+        name: "XI Congreso de Agrimensura. Hotel Habana Libre. Ciudad de la Habana, Cuba",
+        date: "September 2025",
+        location: "Havana, Cuba",
+        presentations: 3,
+        papers: [
+            {
+                title: "Empleo de topografía de alta definición para la modelación geométrica de edificaciones patrimoniales",
+                authors: ["Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva", "Juan Antonio Mulet Naranjo", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Diagnóstico del estado geométrico de la torre del faro 'Punta Lucrecia' con empleo de topografía de alta definición",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Diagnóstico del estado actual de la metodología BIM en la gestión de proyectos en empresas de la construcción de Holguín",
+                authors: ["Luis Enrique Acosta González", "Liset Estopiñan Mulet", "Anabel Reyes Ramírez"]
+            }
+        ]
+    },
+    {
+        name: "15o Congreso Internacional en Competitividad Organizacional, RILCO Yucatán, México",
+        date: "October 2025",
+        location: "Yucatán, Mexico",
+        presentations: 6,
+        papers: [
+            {
+                title: "Integración de la metodología BIM en el sistema presupuestario cubano para el sector de la construcción",
+                authors: ["Eugenio David Carbonell Charchabal", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Procedimiento para el diagnóstico de patologías en edificaciones patrimoniales mediante la integración de tecnologías VANT-BIM",
+                authors: ["Anabel Reyes Ramírez", "Eyllen Nufiez Correa", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Gestión de riesgo ante fuertes vientos en entornos urbanos mediante simulaciones computacionales",
+                authors: ["Liliana Angulo Batista", "Anabel Reyes Ramírez", "Roberto Estrada Cingüalbres"]
+            },
+            {
+                title: "Mejoras en la gestión de edificaciones patrimoniales mediante el empleo de modelos geométricos tridimensionales",
+                authors: ["Juan Antonio Mulet Naranjo", "Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva"]
+            },
+            {
+                title: "Aplicación de la topografía de alta definición al diagnóstico del estado geométrico de elementos constructivos",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Aplicación de los sistemas de información geográfica en apoyo a la movilidad urbana en Holguín, Cuba",
+                authors: ["Miguel Enrique Mouso Gómez", "Libys Martha Zúñiga Igarza", "Anabel Reyes Ramírez"]
+            }
+        ]
+    },
+    {
+        name: "XII Jornadas de I+D+i, IX Jornadas de doctorado ISI & 4th International Workshop on STEM Escuela Politécnica Superior de Sevilla, España",
+        date: "October 2025",
+        location: "Seville, Spain",
+        presentations: 6,
+        papers: [
+            {
+                title: "Herramienta computacional para la evaluación de vulnerabilidad en el diseño de cubiertas ligeras ante fuertes vientos",
+                authors: ["Anabel Reyes Ramírez", "Roberto Pérez Rodríguez", "Roberto Estrada Cingüalbres", "Libys Martha Zúñiga Igarza"]
+            },
+            {
+                title: "¿Por qué colapsan las cubiertas ligeras ante el impacto de los vientos extremos?",
+                authors: ["Carlos Luis Martínez Fernández", "Roberto Andrés Estrada Cingüalbres", "Anabel Reyes Ramírez"]
+            },
+            {
+                title: "Empleo de topografía de alta definición para el diagnóstico del estado geométrico del faro 'Punta Lucrecia' en Holguín, Cuba",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Improvement of coastal tourism development planning based on process reengineering",
+                authors: ["Rodríguez Gómez, Jorge Luis", "Libys Martha Zúñiga Igarza", "Ridel Rodríguez Paneque"]
+            },
+            {
+                title: "La segmentación de imágenes por resonancia magnética cerebral utilizando el enfoque de atlas centrado en el diagnóstico de SCA2: Una Revisión Rápida",
+                authors: ["Robin Cabeza Ruiz", "Roberto Pérez Rodríguez", "Luis Velázquez Pérez"]
+            },
+            {
+                title: "Brainstem Segmentation in 3D MRI using Quaternion-Valued CNNs",
+                authors: ["Robin Cabeza Ruiz", "Roberto Pérez Rodríguez", "Luis Velázquez Pérez"]
+            }
+        ]
+    },
+    {
+        name: "VIII Jornada Internacional de la Ingeniería Civil en Cuba",
+        date: "October 2025",
+        location: "Cuba",
+        presentations: 5,
+        keynotes: 2,
+        papers: [
+            {
+                title: "Consideraciones para el diseño de una herramienta basada en SIG (Sistema de Información Geográfica) en apoyo al Sistema de Salud Público en Holguín",
+                authors: ["Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Diagnóstico del estado geométrico de la torre del Faro 'Punta Lucrecia' con empleo de topografía de alta definición",
+                authors: ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Aplicación de la topografía de alta definición en la modelación geométrica de edificaciones patrimoniales",
+                authors: ["Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva", "Juan Antonio Mulet Naranjo", "Luis Enrique Acosta González"]
+            },
+            {
+                title: "Análisis de resistencia de tipologías de estructuras soportes de cubiertas ligeras con empleo de herramientas computacionales",
+                authors: ["Carlos Luis Martínez Fernández", "Roberto Andrés Estrada Cingüalbres", "Anabel Reyes Ramírez"]
+            },
+            {
+                title: "Uso de la Interferometría de Radar de apertura sintética INSAR para la Obtención de Modelos Digitales de Elevación (MDE)",
+                authors: ["Luis Enrique Acosta González", "Antonio David Molina Ramírez", "Anabel Reyes Ramírez"]
+            }
+        ],
+        keynotes: [
+            {
+                title: "La ingeniería civil en la era digital, claves para una Construcción 4.0",
+                author: "Anabel Reyes Ramírez",
+                type: "Conferencia magistral"
+            },
+            {
+                title: "Sostenibilidad desde un enfoque de la resiliencia fisico-espacial de las estructuras construidas y el efecto del viento",
+                author: "Libys Martha Zúñiga Igarza",
+                type: "Conferencia magistral"
+            }
+        ]
+    },
+    {
+        name: "VIII Simposio Internacional sobre Sistemas electromecánicos SISEM Universidad Antonio Nariño, Colombia",
+        date: "November 2025",
+        location: "Colombia",
+        presentations: 1,
+        papers: [
+            {
+                title: "Diseño Inteligente en la Era 4.0: Los sistemas CAD/CAM/CAE y la IA revolucionando la creación de productos",
+                authors: ["Roberto Pérez Rodríguez"]
+            }
+        ]
     }
 ];
