@@ -29,6 +29,7 @@ function renderTeam() {
     }).join('');
 }
 
+// Enhanced renderProfile with filtering functionality
 function renderProfile() {
     const profileContent = document.getElementById('profile-content');
     if (!profileContent) return;
@@ -45,6 +46,10 @@ function renderProfile() {
     // Set page title
     document.title = `${member.name} - CAD/CAM Study Center`;
 
+    // Get filtered content for this researcher
+    const researcherPublications = filterPublicationsByResearcher(member.name);
+    const researcherEvents = filterEventsByResearcher(member.name);
+
     const imageHtml = member.image
         ? `<img src="${member.image}" alt="${member.name}" class="profile-image">`
         : `<i class="fas fa-user profile-icon-placeholder"></i>`;
@@ -58,13 +63,39 @@ function renderProfile() {
         `<span class="interest-tag">${interest}</span>`
     ).join('');
 
-    const publicationsHtml = member.publications.length > 0
+    const publicationsHtml = researcherPublications.length > 0
         ? `
         <div class="profile-section-block">
-            <h3>Selected Publications</h3>
-            <ul class="publications-list">
-                ${member.publications.map(pub => `<li>${pub}</li>`).join('')}
-            </ul>
+            <h3>Publications (2025)</h3>
+            <div class="profile-publications">
+                ${researcherPublications.map(pub => `
+                    <div class="profile-publication-card">
+                        <h4>${pub.title}</h4>
+                        <p class="pub-authors">${pub.authors}</p>
+                        <p class="pub-journal">${pub.journal || pub.book}</p>
+                        <p class="pub-volume">${pub.volume}</p>
+                        ${pub.doi ? `<a href="${pub.doi}" class="pub-doi" target="_blank">View Publication</a>` : ''}
+                        ${pub.scopus ? '<span class="scopus-badge">SCOPUS</span>' : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </div>`
+        : '';
+
+    const eventsHtml = researcherEvents.length > 0
+        ? `
+        <div class="profile-section-block">
+            <h3>Event Participation (2025)</h3>
+            <div class="profile-events">
+                ${researcherEvents.map(event => `
+                    <div class="profile-event-card">
+                        <h4>${event.eventName}</h4>
+                        <p class="event-meta">${event.date} • ${event.location}</p>
+                        <p class="event-title">${event.presentationTitle}</p>
+                        ${event.workshop ? `<p class="event-workshop">Workshop: ${event.workshop}</p>` : ''}
+                    </div>
+                `).join('')}
+            </div>
         </div>`
         : '';
 
@@ -103,14 +134,63 @@ function renderProfile() {
             </div>
 
             ${publicationsHtml}
+            ${eventsHtml}
         </div>
     `;
 
-    // Ensure translation is applied if language was already switched
+    // Apply translations if needed
     const currentLang = localStorage.getItem('selectedLanguage') || 'en';
     if (currentLang !== 'en') {
         changeLanguage(currentLang);
     }
+}
+
+// Filter publications by researcher name
+function filterPublicationsByResearcher(researcherName) {
+    const allPublications = [
+        ...publications2025.groupI,
+        ...publications2025.groupII,
+        ...publications2025.groupIII,
+        ...publications2025.bookChapters
+    ];
+
+    return allPublications.filter(pub => {
+        // Check if researcher name appears in authors string (case insensitive)
+        const authorsLower = pub.authors.toLowerCase();
+        const researcherNameLower = researcherName.toLowerCase();
+
+        // Handle different name formats (full name, last name, etc.)
+        const nameParts = researcherNameLower.split(' ');
+        return nameParts.some(part => authorsLower.includes(part));
+    });
+}
+
+// Filter events by researcher name
+function filterEventsByResearcher(researcherName) {
+    const researcherEvents = [];
+    const researcherNameLower = researcherName.toLowerCase();
+
+    events2025.forEach(event => {
+        event.papers.forEach(paper => {
+            // Check if researcher is in authors array
+            const isAuthor = paper.authors.some(author =>
+                author.toLowerCase().includes(researcherNameLower) ||
+                researcherNameLower.includes(author.toLowerCase())
+            );
+
+            if (isAuthor) {
+                researcherEvents.push({
+                    eventName: event.name,
+                    date: event.date,
+                    location: event.location,
+                    presentationTitle: paper.title,
+                    workshop: paper.workshop || null
+                });
+            }
+        });
+    });
+
+    return researcherEvents;
 }
 
 // Render Projects
@@ -614,4 +694,92 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.classList.remove('active');
         });
     });
+});
+
+// Enhanced dropdown menu functionality for hierarchical navigation
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+    dropdownMenus.forEach(menu => {
+        const trigger = menu.querySelector('.menu-trigger');
+        const dropdown = menu.querySelector('.dropdown');
+
+        // Mobile touch functionality
+        if (window.innerWidth <= 767) {
+            trigger.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Close other open dropdowns
+                dropdownMenus.forEach(otherMenu => {
+                    if (otherMenu !== menu) {
+                        otherMenu.classList.remove('active');
+                    }
+                });
+
+                menu.classList.toggle('active');
+            });
+        }
+
+        // Desktop hover functionality
+        else {
+            let hoverTimeout;
+
+            menu.addEventListener('mouseenter', function () {
+                clearTimeout(hoverTimeout);
+                menu.classList.add('active');
+            });
+
+            menu.addEventListener('mouseleave', function () {
+                hoverTimeout = setTimeout(() => {
+                    menu.classList.remove('active');
+                }, 100);
+            });
+        }
+    });
+
+    // Close all dropdowns when clicking outside
+    document.addEventListener('click', function () {
+        dropdownMenus.forEach(menu => {
+            menu.classList.remove('active');
+        });
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function () {
+        dropdownMenus.forEach(menu => {
+            menu.classList.remove('active');
+        });
+    });
+
+    // Mobile menu functionality (keep existing)
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mainNav.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (mainNav.classList.contains('active') &&
+                !mainNav.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                mainNav.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
 });
