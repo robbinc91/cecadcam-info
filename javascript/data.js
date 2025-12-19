@@ -741,6 +741,56 @@ const teamMembers = [
         contact: { email: "carlos.martinez@uho.edu.cu" },
         interests: ["Civil Engineering"],
         publications: []
+    },
+    {
+        id: "pavel-michel-almaguer-zaldivar",
+        name: "Pavel Michel Almaguer Zaldívar",
+        image: null,
+        roles: [
+            { text: "Mechanical Engineer" },
+            { text: "PhD" }
+        ],
+        bioKey: "generic_bio",
+        contact: { email: "pavel@uho.edu.cu" },
+        interests: ["Mechanical Engineering"],
+        publications: []
+    },
+    {
+        id: "yosvany-morales-hernandez",
+        name: "Yosvany Morales Hernández",
+        image: null,
+        roles: [
+            { text: "Mechanical Engineer" },
+            { text: "PhD Student, \"Development of Engineering\" Program" }
+        ],
+        bioKey: "generic_bio",
+        contact: { email: "yosvany@uho.edu.cu" },
+        interests: ["Mechanical Engineering"],
+        publications: []
+    },
+    {
+        id: "rene-ortiz-cruz",
+        name: "René ortiz Cruz",
+        image: null,
+        roles: [
+            { text: "Technician" }
+        ],
+        bioKey: "generic_bio",
+        contact: { email: "rene@uho.edu.cu" },
+        interests: [],
+        publications: []
+    },
+    {
+        id: "dadira-aracelis-bedia-silva",
+        name: "Dadira Aracelis bedia Silva",
+        image: null,
+        roles: [
+            { text: "Secretary" }
+        ],
+        bioKey: "generic_bio",
+        contact: { email: "dadira@uho.edu.cu" },
+        interests: [],
+        publications: []
     }
 ];
 
