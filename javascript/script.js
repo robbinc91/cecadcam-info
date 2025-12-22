@@ -47,8 +47,8 @@ function renderProfile() {
     document.title = `${member.name} - CAD/CAM Study Center`;
 
     // Get filtered content for this researcher
-    const researcherPublications = filterPublicationsByResearcher(member.name);
-    const researcherEvents = filterEventsByResearcher(member.name);
+    const researcherPublications = filterPublicationsByResearcher(member);
+    const researcherEvents = filterEventsByResearcher(member);
 
     const imageHtml = member.image
         ? `<img src="${member.image}" alt="${member.name}" class="profile-image">`
@@ -92,6 +92,7 @@ function renderProfile() {
                         <h4>${event.eventName}</h4>
                         <p class="event-meta">${event.date} • ${event.location}</p>
                         <p class="event-title">${event.presentationTitle}</p>
+                        <p class="event-authors">${event.authors.join(', ')}</p>
                         ${event.workshop ? `<p class="event-workshop">Workshop: ${event.workshop}</p>` : ''}
                     </div>
                 `).join('')}
@@ -146,7 +147,14 @@ function renderProfile() {
 }
 
 // Filter publications by researcher name
-function filterPublicationsByResearcher(researcherName) {
+function filterPublicationsByResearcher(researcher) {
+
+
+    const researcherNameParts = researcher.name.toLowerCase().split(/[:,;\s-]+/)
+    const nameParts = [...new Set([...researcherNameParts, ...researcher.search_keys])];
+
+    console.log(nameParts);
+    console.log(researcherNameParts);
     const allPublications = [
         ...publications2025.groupI,
         ...publications2025.groupII,
@@ -157,26 +165,25 @@ function filterPublicationsByResearcher(researcherName) {
     return allPublications.filter(pub => {
         // Check if researcher name appears in authors string (case insensitive)
         const authorsLower = pub.authors.toLowerCase();
-        const researcherNameLower = researcherName.toLowerCase();
-
-        // Handle different name formats (full name, last name, etc.)
-        const nameParts = researcherNameLower.split(' ');
-        return nameParts.some(part => authorsLower.includes(part));
+        console.log(authorsLower);
+        console.log(nameParts.filter(part => authorsLower.includes(part)));
+        return nameParts.filter(part => authorsLower.includes(part)).length >= 3;
     });
 }
 
 // Filter events by researcher name
-function filterEventsByResearcher(researcherName) {
+function filterEventsByResearcher(researcher) {
     const researcherEvents = [];
-    const researcherNameLower = researcherName.toLowerCase();
+
+    const researcherNameParts = researcher.name.toLowerCase().split(/[:,;\s-]+/)
+    const nameParts = [...new Set([...researcherNameParts, ...researcher.search_keys])];
 
     events2025.forEach(event => {
         event.papers.forEach(paper => {
             // Check if researcher is in authors array
-            const isAuthor = paper.authors.some(author =>
-                author.toLowerCase().includes(researcherNameLower) ||
-                researcherNameLower.includes(author.toLowerCase())
-            );
+
+            const authorsLower = paper.authors.join(', ').toLowerCase();
+            const isAuthor = nameParts.filter(part => authorsLower.includes(part)).length >= 3;
 
             if (isAuthor) {
                 researcherEvents.push({
@@ -184,7 +191,8 @@ function filterEventsByResearcher(researcherName) {
                     date: event.date,
                     location: event.location,
                     presentationTitle: paper.title,
-                    workshop: paper.workshop || null
+                    workshop: paper.workshop || null,
+                    authors: paper.authors
                 });
             }
         });

@@ -590,6 +590,9 @@ const teamMembers = [
             "Cabeza-Ruiz, R., Velázquez-Pérez, L., Pérez-Rodríguez, R. et al. ConvNets for automatic detection of polyglutamine SCAs from brain MRIs: state of the art applications. Med Biol Eng Comput 61, 1–24 (2023). https://doi.org/10.1007/s11517-022-02714-w",
             "Cabeza-Ruiz, R., Velázquez-Pérez, L., Linares-Barranco, A., & Pérez-Rodríguez, R. (2022). Convolutional Neural Networks for Segmenting Cerebellar Fissures from Magnetic Resonance Imaging. Sensors, 22(4), 1345. https://doi.org/10.3390/s22041345",
             "Cabeza-Ruiz, R., Velázquez-Pérez, L., Pérez-Rodríguez, R. (2021). Convolutional Neural Networks as Support Tools for Spinocerebellar Ataxia Detection from Magnetic Resonances. In: Hernández Heredia, Y., Milián Núñez, V., Ruiz Shulcloper, J. (eds) Progress in Artificial Intelligence and Pattern Recognition. IWAIPR 2021. Lecture Notes in Computer Science(), vol 13055. Springer, Cham. https://doi.org/10.1007/978-3-030-89691-1_11"
+        ],
+        search_keys: [
+            'robin', 'cabeza', 'ruiz', 'r.', 'robin cabeza', 'robin cabeza ruiz', 'cabeza-ruiz'
         ]
     },
     {
@@ -604,7 +607,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "roberto.perez@uho.edu.cu" },
         interests: ["Manufacturing", "Engineering Education"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'roberto', 'perez', 'rodriguez', 'r.', 'roberto perez', 'robin cabeza rodriguez', 'perez-rodriguez'
+        ]
     },
     {
         id: "yorley-arbella-feliciano",
@@ -617,7 +623,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "yorley.arbella@uho.edu.cu" },
         interests: ["CAD/CAM", "Mechanical Design"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'yorley', 'arbella', 'feliciano', 'y.', 'yorley arbella', 'yorley arbella feliciano', 'arbella-feliciano'
+        ]
     },
     {
         id: "rolando-esteban-simeon-monet",
@@ -629,7 +638,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "rolando.simeon@uho.edu.cu" },
         interests: ["Mechanical Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'rolando', 'esteban', 'simeon', 'monet', 'r.', 'e.', 'simeon-monet', 'rolando esteban simeon', 'rolando simeon', 'rolando simeon monet', 'rolando esteban simeon monet'
+        ]
     },
     {
         id: "luis-wilfredo-hernandez-gonzalez",
@@ -641,7 +653,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "luis.wilfredo@uho.edu.cu" },
         interests: ["Mechanical Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'luis', 'wilfredo', 'hernandez', 'gonzalez', 'l.', 'w.', 'hernandez-gonzalez', 'luis wilfredo hernandez', 'hernandez-gonzalez', 'wilfredo hernandez', 'luis wilfredo hernandez gonzalez'
+        ]
     },
     {
         id: "roberto-andres-estrada-cingualbres",
@@ -653,7 +668,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "roberto.estrada@uho.edu.cu" },
         interests: ["Aeronautics", "Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'roberto', 'andres', 'estrada', 'cingualbres', 'r.', 'a.', 'estrada-cingualbres', 'roberto estrada', 'roberto estrada cingualbres', 'roberto andres estrada', 'roberto andres estrada cingualbres'
+        ]
     },
     {
         id: "luis-enrique-acosta-gonzalez",
@@ -665,7 +683,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "luis.acosta@uho.edu.cu" },
         interests: ["Civil Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'luis', 'enrique', 'acosta', 'gonzalez', 'l.', 'e.', 'acosta-gonzalez', 'luis acosta', 'luis enrique acosta', 'luis enrique acosta gonzalez', 'luis acosta gonzalez'
+        ]
     },
     {
         id: "anabel-reyes-ramirez",
@@ -677,7 +698,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "anabel.reyes@uho.edu.cu" },
         interests: ["Civil Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'anabel', 'reyes', 'ramirez', 'a.', 'r.', 'anabel reyes', 'anabel reyes ramirez', 'reyes-ramirez'
+        ]
     },
     {
         id: "libys-martha-zuniga-igarza",
@@ -689,7 +713,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "libys.zuniga@uho.edu.cu" },
         interests: ["Architecture"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'libys', 'martha', 'zuniga', 'igarza', 'l.', 'm.', 'zuniga-igarza', 'libys zuniga', 'libys suniga igarza', 'libys martha zuniga', 'libys martha suniga igarza'
+        ]
     },
     {
         id: "odet-lopez-batista",
@@ -701,7 +728,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "odet.lopez@uho.edu.cu" },
         interests: ["Mathematics"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'odet', 'lopez', 'batista', 'o.', 'odet lopez', 'odet lopez batista', 'lopez-batista'
+        ]
     },
     {
         id: "luis-guillermo-rodriguez-velazquez",
@@ -714,7 +744,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "luis.rodriguez@uho.edu.cu" },
         interests: ["Mechanical Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'luis', 'guillermo', 'rodriguez', 'velazquez', 'l.', 'g.', 'rodriguez-velazquez', 'luis guillermo', 'luis guillermo rodriguez', 'rodriguez-velazquez'
+        ]
     },
     {
         id: "adrian-de-la-luz-alvarez",
@@ -727,7 +760,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "adrian.luz@uho.edu.cu" },
         interests: ["Civil Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'adrian', 'de la luz', 'luz', 'alvarez', 'a.'
+        ]
     },
     {
         id: "carlos-luis-martinez-fernandez",
@@ -740,7 +776,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "carlos.martinez@uho.edu.cu" },
         interests: ["Civil Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'carlos', 'luis', 'martinez', 'fernandez', 'c.', 'l.', 'martinez-fernandez', 'carlos martinez', 'carlos luis martinez', 'carlos martinez fernandez', 'carlos luis martinez fernandez'
+        ]
     },
     {
         id: "pavel-michel-almaguer-zaldivar",
@@ -753,7 +792,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "pavel@uho.edu.cu" },
         interests: ["Mechanical Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'pavel', 'michel', 'almaguer', 'zaldivar', 'p.', 'm.', 'almaguer-zaldivar', 'pavel michel', 'pavel michel almaguer', 'pavel michel almaguer zaldivar'
+        ]
     },
     {
         id: "yosvany-morales-hernandez",
@@ -766,7 +808,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "yosvany@uho.edu.cu" },
         interests: ["Mechanical Engineering"],
-        publications: []
+        publications: [],
+        search_keys: [
+            'yosvany', 'morales', 'hernandez', 'y.', 'yosvany morales', 'yosvany morales hernandez', 'morales-hernandez'
+        ]
     },
     {
         id: "rene-ortiz-cruz",
@@ -778,7 +823,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "rene@uho.edu.cu" },
         interests: [],
-        publications: []
+        publications: [],
+        search_keys: [
+            'rene', 'ortiz', 'cruz', 'r.', 'rene ortiz', 'rene ortiz cruz', 'ortiz-cruz'
+        ]
     },
     {
         id: "dadira-aracelis-bedia-silva",
@@ -790,7 +838,10 @@ const teamMembers = [
         bioKey: "generic_bio",
         contact: { email: "dadira@uho.edu.cu" },
         interests: [],
-        publications: []
+        publications: [],
+        search_keys: [
+            'dadira', 'aracelis', 'bedia', 'silva'
+        ]
     }
 ];
 
@@ -996,7 +1047,7 @@ const publications2025 = {
             title: "Toxicological Evaluation of Anti-Inflammatory Biological Active Compound Based-On Mirabilis Jalapa",
             authors: "de Cádiz Agüero, A.T.G., Fernández, K.E.G., Rodríguez, A.M., Rojas, P.A.D., Pérez-Rodríguez, R., Testé, I.S.",
             book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
-            doi: "https://doi.org/10.1007/978-3031-99987-1_5",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_5",
             scopus: true,
             type: "book chapter"
         },
@@ -1004,7 +1055,7 @@ const publications2025 = {
             title: "The Integration of CAD/CAM/CAE Tools into the Engineering Curriculum",
             authors: "Ramírez, A.R., Martin, R.L., Lopéz, M.H.R., Pérez-Rodríguez, R.",
             book: "A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85",
-            doi: "https://doi.org/10.1007/978-3031-99987-1_6",
+            doi: "https://doi.org/10.1007/978-3-031-99987-1_6",
             scopus: true,
             type: "book chapter"
         },
