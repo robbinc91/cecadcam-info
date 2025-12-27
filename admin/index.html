@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Login - CAD/CAM</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .login-box {
+            max-width: 420px;
+            margin: 80px auto;
+            padding: 28px;
+            background: #fff;
+            border-radius: 8px
+        }
+
+        .login-box h1 {
+            margin-bottom: 12px
+        }
+
+        .login-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 12px
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #1976d2;
+            color: #fff;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Admin Authentication</h1>
+        <p>Username is fixed to <strong>admin</strong>. Enter the admin password to continue.</p>
+        <div class="login-field">
+            <label>Username</label>
+            <input id="username" value="admin" disabled>
+            <label>Password</label>
+            <input id="password" type="password" placeholder="Enter admin password">
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+            <button id="loginBtn" class="btn">Login</button>
+            <button id="backBtn" class="btn" style="background:#666">Back</button>
+        </div>
+        <p id="msg" style="margin-top:12px;color:#b71c1c"></p>
+    </div>
+
+    <script>
+        // Attempt to validate password by fetching encrypted file and decrypting with entered password.
+        // Encryption scheme: file contains base64 of XOR(ciphertext) where ciphertext = plaintext XOR password (repeated).
+        // Plaintext marker: "ACCESS_GRANTED"
+        const ENC_URL = '/private/admin.enc';
+        const PLAIN_MARKER = 'ACCESS_GRANTED';
+
+        function b64ToBytes(b64) {
+            try {
+                // sanitize: remove any characters not part of base64 and trim
+                console.log('Decoding base64 credential file...', b64);
+                const cleaned = b64.replace(/[^A-Za-z0-9+/=]/g, '').trim();
+                console.log('Cleaned base64:', cleaned);
+                if (!cleaned) throw new Error('Empty credential file or not base64 encoded.');
+                const bin = atob(cleaned);
+                const arr = new Uint8Array(bin.length);
+                for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+                return arr;
+            } catch (e) {
+                throw new Error('Credential file appears corrupted or not valid base64: ' + e.message);
+            }
+        }
+
+        function tryDecrypt(bytes, password) {
+            if (!password) return null;
+            const pwBytes = new TextEncoder().encode(password);
+            const out = new Uint8Array(bytes.length);
+            for (let i = 0; i < bytes.length; i++) {
+                out[i] = bytes[i] ^ pwBytes[i % pwBytes.length];
+            }
+            return new TextDecoder().decode(out);
+        }
+
+        async function validate(password) {
+            try {
+                const r = await fetch(ENC_URL, { cache: 'no-store' });
+                if (!r.ok) throw new Error('Could not load credential file.');
+                const b64 = await r.text();
+                const bytes = b64ToBytes(b64.trim());
+                const dec = tryDecrypt(bytes, password);
+                if (dec === PLAIN_MARKER) return true;
+                return false;
+            } catch (e) {
+                console.error(e);
+                throw e;
+            }
+        }
+
+        document.getElementById('loginBtn').addEventListener('click', async () => {
+            const pwd = document.getElementById('password').value;
+            const msgEl = document.getElementById('msg');
+            msgEl.textContent = '';
+            if (!pwd) { msgEl.textContent = 'Please type something — even a cat likes a passphrase.'; return; }
+            try {
+                const ok = await validate(pwd);
+                if (ok) {
+                    // mark authenticated and redirect to editor
+                    localStorage.setItem('adminAuthenticated', '1');
+                    // store a short-lived token to tie to this password (optional)
+                    localStorage.setItem('adminAuthWhen', String(Date.now()));
+                    window.location.href = '/data-editor.html';
+                } else {
+                    // funny incorrect message
+                    msgEl.textContent = 'Nope — the password insists on staying mysterious. Try again!';
+                }
+            } catch (e) {
+                msgEl.textContent = 'Something went sideways while checking credentials. Try again later.';
+            }
+        });
+
+        document.getElementById('backBtn').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+
+</html>

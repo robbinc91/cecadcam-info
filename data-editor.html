@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Editor - CAD/CAM</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .editor-container{max-width:1100px;margin:40px auto;padding:20px;background:#fff;border-radius:8px}
+        .editor-controls{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+        textarea.json-editor{width:100%;height:520px;font-family:monospace;font-size:13px;padding:12px}
+        select.data-select{padding:6px}
+        .btn{padding:8px 12px;border-radius:4px;border:1px solid #ccc;background:#1976d2;color:#fff;cursor:pointer}
+        .btn.secondary{background:#666}
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <h1>data.js Editor</h1>
+        <p>Edit the main data structures and download an updated <strong>data.js</strong> file.</p>
+
+        <div class="editor-controls">
+            <label for="dataSelect">Choose data:</label>
+            <select id="dataSelect" class="data-select">
+                <option value="teamMembers">teamMembers</option>
+                <option value="projects">projects</option>
+                <option value="publications2025">publications2025</option>
+                <option value="events2025">events2025</option>
+                <option value="translations">translations</option>
+                <option value="iconsAndRefs">iconsAndRefs</option>
+            </select>
+
+            <button id="loadBtn" class="btn secondary">Load</button>
+            <button id="validateBtn" class="btn">Validate JSON</button>
+            <button id="applyBtn" class="btn">Apply Changes</button>
+            <button id="downloadBtn" class="btn">Download data.js</button>
+            <button id="reloadOriginalBtn" class="btn secondary">Reload Original</button>
+        </div>
+
+        <textarea id="jsonEditor" class="json-editor" spellcheck="false"></textarea>
+
+        <div style="margin-top:12px;color:#333">
+            <strong>Notes:</strong>
+            <ul>
+                <li>Editing is immediate only in the browser. Use "Download data.js" to save a replacement file.</li>
+                <li>To add or remove entries, edit the JSON for the selected object and click <em>Apply Changes</em>.</li>
+                <li>If you break the site, reload the original file using <em>Reload Original</em> and refresh the main site pages.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Protect the editor: ensure adminAuthenticated set by /admin login.
+        (function(){
+            try{
+                const ok = localStorage.getItem('adminAuthenticated');
+                if (!ok){
+                    // redirect to admin login
+                    window.location.href = '/admin/';
+                }
+            }catch(e){
+                window.location.href = '/admin/';
+            }
+        })();
+    </script>
+    <script src="javascript/data.js"></script>
+    <script src="javascript/data-editor.js"></script>
+</body>
+</html>
