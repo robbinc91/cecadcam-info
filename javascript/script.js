@@ -5,7 +5,7 @@ function renderTeam() {
 
     teamGrid.innerHTML = teamMembers.map(member => {
         const imageHtml = member.image
-            ? `<img src="${member.image}" alt="${member.name}">`
+            ? `<img src="${member.image}" alt="${member.name}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-user\\'></i>'">`
             : `<i class="fas fa-user"></i>`;
 
         const rolesHtml = member.roles.map(role => {
@@ -51,7 +51,7 @@ function renderProfile() {
     const researcherEvents = filterEventsByResearcher(member);
 
     const imageHtml = member.image
-        ? `<img src="${member.image}" alt="${member.name}" class="profile-image">`
+        ? `<img src="${member.image}" alt="${member.name}" class="profile-image" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-user profile-icon-placeholder\\'></i>'">`
         : `<i class="fas fa-user profile-icon-placeholder"></i>`;
 
     const rolesHtml = member.roles.map(role => {
@@ -207,10 +207,13 @@ function renderProjects() {
     if (!projectsGrid) return;
 
     projectsGrid.innerHTML = projects.map(project => {
+        const projectImage = project.image
+            ? `<img src="${project.image}" alt="Project Image" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-project-diagram\\'></i>'">`
+            : `<i class="fas fa-project-diagram"></i>`;
         return `
             <div class="project-card">
                 <div class="project-image">
-                    <img src="${project.image}" alt="Project Image">
+                    ${projectImage}
                 </div>
                 <div class="project-content">
                     <h3 class="project-title" data-translate="${project.titleKey}">Project Title</h3>
@@ -791,3 +794,436 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+/* ===== IMAGE LAZY LOADING & OPTIMIZATION ===== */
+
+// Intersection Observer for enhanced lazy loading
+function initLazyLoading() {
+    // Check for native lazy loading support
+    const supportsLazyLoading = 'loading' in HTMLImageElement.prototype;
+
+    // Create intersection observer for images
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+
+                // Add loaded class when image loads
+                img.onload = () => {
+                    img.classList.add('loaded');
+                    img.classList.add('fade-in');
+                    img.parentElement?.classList.remove('loading');
+                };
+
+                // Handle image error
+                img.onerror = () => {
+                    img.classList.add('loaded');
+                    img.style.display = 'none';
+                    // Show fallback icon
+                    const fallback = document.createElement('i');
+                    fallback.className = img.dataset.fallbackIcon || 'fas fa-image';
+                    fallback.style.cssText = 'font-size: 3rem; color: #ccc;';
+                    img.parentElement?.appendChild(fallback);
+                };
+
+                // If native lazy loading is supported, just add the attribute
+                if (supportsLazyLoading && img.loading !== 'lazy') {
+                    img.loading = 'lazy';
+                }
+
+                // Stop observing once we've handled the image
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '100px 0px',
+        threshold: 0.01
+    });
+
+    // Observe all images that need lazy loading
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        imageObserver.observe(img);
+    });
+
+    // Observer for background images
+    const bgObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const bgImage = element.dataset.bgImage;
+
+                if (bgImage) {
+                    element.style.backgroundImage = `url(${bgImage})`;
+                    element.classList.add('bg-loaded');
+                    bgObserver.unobserve(element);
+                }
+            }
+        });
+    }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
+    });
+
+    // Observe elements with data-bg-image attribute
+    document.querySelectorAll('[data-bg-image]').forEach(el => {
+        bgObserver.observe(el);
+    });
+
+    return imageObserver;
+}
+
+// Progressive image loading with blur-up effect
+function initProgressiveLoading() {
+    const progressiveImages = document.querySelectorAll('.progressive img');
+
+    progressiveImages.forEach(img => {
+        const src = img.dataset.src;
+        const placeholder = img.dataset.placeholder;
+
+        if (src && placeholder) {
+            // Create placeholder image
+            const placeholderImg = new Image();
+            placeholderImg.src = placeholder;
+            placeholderImg.onload = () => {
+                img.style.filter = 'blur(0)';
+                img.classList.add('loaded');
+            };
+
+            // Load full resolution image
+            img.src = src;
+        }
+    });
+}
+
+// Add loading state to images before they load
+function addImageLoadingStates() {
+    document.querySelectorAll('img').forEach(img => {
+        // Skip already loaded images
+        if (img.complete) {
+            img.classList.add('loaded');
+            return;
+        }
+
+        // Add loading class to parent
+        img.parentElement?.classList.add('loading');
+
+        // Remove loading class when loaded
+        img.addEventListener('load', () => {
+            img.parentElement?.classList.remove('loading');
+            img.classList.add('loaded');
+        });
+
+        // Handle error
+        img.addEventListener('error', () => {
+            img.parentElement?.classList.remove('loading');
+            img.parentElement?.classList.add('error');
+        });
+    });
+}
+
+// Initialize image optimization on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    initLazyLoading();
+    addImageLoadingStates();
+
+    // Re-run for dynamically added content
+    const mutationObserver = new MutationObserver((mutations) => {
+        mutations.forEach(mutation => {
+            if (mutation.addedNodes.length > 0) {
+                // Check for new images
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === 1) {
+                        const newImages = node.querySelectorAll?.('img[loading="lazy"]');
+                        newImages?.forEach(img => {
+                            const imageObserver = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        const img = entry.target;
+                                        img.onload = () => img.classList.add('loaded');
+                                        img.onerror = () => {
+                                            img.style.display = 'none';
+                                            const fallback = document.createElement('i');
+                                            fallback.className = img.dataset.fallbackIcon || 'fas fa-image';
+                                            fallback.style.cssText = 'font-size: 3rem; color: #ccc;';
+                                            img.parentElement?.appendChild(fallback);
+                                        };
+                                        observer.unobserve(img);
+                                    }
+                                });
+                            }, { rootMargin: '100px 0px' });
+                            imageObserver.observe(img);
+                        });
+
+                        // Check for new background images
+                        const newBgImages = node.querySelectorAll?.('[data-bg-image]');
+                        newBgImages?.forEach(el => {
+                            el.style.backgroundImage = `url(${el.dataset.bgImage})`;
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    mutationObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+});
+
+// Preload critical images
+function preloadCriticalImages() {
+    const criticalImages = [
+        'images/team/robin_cabeza_ruiz.png'
+    ];
+
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// Run preload for critical images
+preloadCriticalImages();
+
+/* ===== RESPONSIVE IMAGE & WEBP SUPPORT ===== */
+
+// Check WebP support
+function supportsWebP() {
+    const canvas = document.createElement('canvas');
+    if (canvas.getContext && canvas.getContext('2d')) {
+        return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    }
+    return false;
+}
+
+// Generate responsive image markup with srcset
+function getResponsiveImageMarkup(config) {
+    const {
+        src,
+        alt,
+        sizes = '(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw',
+        className = '',
+        loading = 'lazy',
+        decoding = 'async',
+        fallbackIcon = 'fas fa-image'
+    } = config;
+
+    // Generate filename variants for different sizes
+    const basePath = src.replace(/\.[^/.]+$/, '');
+    const extension = src.split('.').pop();
+
+    // Create srcset for responsive images
+    const srcset = [
+        `${basePath}-small.${extension} 480w`,
+        `${basePath}-medium.${extension} 768w`,
+        `${basePath}-large.${extension} 1200w`
+    ].join(', ');
+
+    // Check if WebP versions exist (for browsers that support it)
+    const useWebP = supportsWebP();
+    const webpSrcset = useWebP ? [
+        `${basePath}-small.webp 480w`,
+        `${basePath}-medium.webp 768w`,
+        `${basePath}-large.webp 1200w`
+    ].join(', ') : '';
+
+    // Build the picture element with WebP source
+    let markup = `<picture>`;
+
+    if (useWebP && webpSrcset) {
+        markup += `
+            <source srcset="${webpSrcset}" sizes="${sizes}" type="image/webp">`;
+    }
+
+    markup += `
+        <img
+            src="${src}"
+            srcset="${srcset}"
+            sizes="${sizes}"
+            alt="${alt}"
+            class="${className}"
+            loading="${loading}"
+            decoding="${decoding}"
+            onload="this.classList.add('loaded')"
+            onerror="this.parentElement.innerHTML='<i class=\\'${fallbackIcon}\\'></i>'"
+        >
+    </picture>`;
+
+    return markup;
+}
+
+// Update team member image rendering to use responsive images
+function renderTeam() {
+    const teamGrid = document.querySelector('.team-grid');
+    if (!teamGrid) return;
+
+    teamGrid.innerHTML = teamMembers.map(member => {
+        const imageHtml = member.image
+            ? `<img src="${member.image}" alt="${member.name}" loading="lazy" decoding="async" class="fade-in" onload="this.classList.add('loaded')" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-user\\'></i>'">`
+            : `<i class="fas fa-user"></i>`;
+
+        const rolesHtml = member.roles.map(role => {
+            const translateAttr = role.translateKey ? ` data-translate="${role.translateKey}"` : '';
+            return `<p class="member-title"${translateAttr}>${role.text}</p>`;
+        }).join('');
+
+        return `
+            <a href="profile.html?id=${member.id}" class="team-member-link">
+                <div class="team-member">
+                    <div class="member-image">
+                        ${imageHtml}
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">${member.name}</h3>
+                        ${rolesHtml}
+                    </div>
+                </div>
+            </a>
+        `;
+    }).join('');
+}
+
+// Update profile image rendering to use responsive images
+function renderProfile() {
+    const profileContent = document.getElementById('profile-content');
+    if (!profileContent) return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const memberId = urlParams.get('id');
+    const member = teamMembers.find(m => m.id === memberId);
+
+    if (!member) {
+        profileContent.innerHTML = '<p class="error-message">Member not found.</p>';
+        return;
+    }
+
+    // Set page title
+    document.title = `${member.name} - CAD/CAM Study Center`;
+
+    // Get filtered content for this researcher
+    const researcherPublications = filterPublicationsByResearcher(member);
+    const researcherEvents = filterEventsByResearcher(member);
+
+    const imageHtml = member.image
+        ? `<img src="${member.image}" alt="${member.name}" class="profile-image" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-user profile-icon-placeholder\\'></i>'">`
+        : `<i class="fas fa-user profile-icon-placeholder"></i>`;
+
+    const rolesHtml = member.roles.map(role => {
+        const translateAttr = role.translateKey ? ` data-translate="${role.translateKey}"` : '';
+        return `<p class="profile-role"${translateAttr}>${role.text}</p>`;
+    }).join('');
+
+    const interestsHtml = member.interests.map(interest =>
+        `<span class="interest-tag">${interest}</span>`
+    ).join('');
+
+    const publicationsHtml = researcherPublications.length > 0
+        ? `
+        <div class="profile-section-block">
+            <h3>Publications (2025)</h3>
+            <div class="profile-publications">
+                ${researcherPublications.map(pub => `
+                    <div class="profile-publication-card">
+                        <h4>${pub.title}</h4>
+                        <p class="pub-authors">${pub.authors}</p>
+                        <p class="pub-journal">${pub.journal || pub.book}</p>
+                        <p class="pub-volume">${pub.volume}</p>
+                        ${pub.doi ? `<a href="${pub.doi}" class="pub-doi" target="_blank">View Publication</a>` : ''}
+                        ${pub.scopus ? '<span class="scopus-badge">SCOPUS</span>' : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </div>`
+        : '';
+
+    const eventsHtml = researcherEvents.length > 0
+        ? `
+        <div class="profile-section-block">
+            <h3>Event Participation (2025)</h3>
+            <div class="profile-events">
+                ${researcherEvents.map(event => `
+                    <div class="profile-event-card">
+                        <h4>${event.eventName}</h4>
+                        <p class="event-meta">${event.date} • ${event.location}</p>
+                        <p class="event-title">${event.presentationTitle}</p>
+                        <p class="event-authors">${event.authors.join(', ')}</p>
+                        ${event.workshop ? `<p class="event-workshop">Workshop: ${event.workshop}</p>` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </div>`
+        : '';
+
+    const contactHtml = `
+        <div class="contact-links">
+            ${Object.keys(member.contact).filter(key => member.contact[key] !== '#').map(el =>
+        `<a href="${el === 'email' ? 'mailto:' : ''}${member.contact[el]}" class="contact-btn"><i class="${iconsAndRefs[el].icon}"></i> ${iconsAndRefs[el].text}</a>`).join('')}
+        </div>
+    `;
+
+    profileContent.innerHTML = `
+        <div class="profile-header-card">
+            <div class="profile-image-container">
+                ${imageHtml}
+            </div>
+            <div class="profile-main-info">
+                <h2 class="profile-name">${member.name}</h2>
+                ${rolesHtml}
+                ${contactHtml}
+            </div>
+        </div>
+        
+        <div class="profile-body">
+            <div class="profile-bio-section">
+                <h3>Biography</h3>
+                <p class="profile-bio" data-translate="${member.bioKey}">
+                    ${translations['en'][member.bioKey] || "Biography not available."}
+                </p>
+            </div>
+
+            <div class="profile-interests-section">
+                <h3>Research Interests</h3>
+                <div class="interests-container">
+                    ${interestsHtml}
+                </div>
+            </div>
+
+            ${publicationsHtml}
+            ${eventsHtml}
+        </div>
+    `;
+
+    // Apply translations if needed
+    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+    if (currentLang !== 'en') {
+        changeLanguage(currentLang);
+    }
+}
+
+// Update projects rendering to use responsive images
+function renderProjects() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (!projectsGrid) return;
+
+    projectsGrid.innerHTML = projects.map(project => {
+        const projectImage = project.image
+            ? `<img src="${project.image}" alt="Project Image" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-project-diagram\\'></i>'">`
+            : `<i class="fas fa-project-diagram"></i>`;
+        return `
+            <div class="project-card">
+                <div class="project-image">
+                    ${projectImage}
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title" data-translate="${project.titleKey}">Project Title</h3>
+                    <p class="project-description" data-translate="${project.descKey}">Project Description</p>
+                    <div class="project-meta">
+                        <span data-translate="${project.programKey}">Program Name</span>
+                        <span data-translate="${project.periodKey}">Period</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
