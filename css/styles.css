@@ -3406,3 +3406,304 @@ img {
         opacity: 1 !important;
     }
 }
+
+/* ===== PWA STYLES ===== */
+
+/* PWA Install Button */
+.pwa-install-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 8px 30px rgba(0, 86, 179, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.pwa-install-button.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pwa-install-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 86, 179, 0.5);
+}
+
+.pwa-install-button:active {
+    transform: translateY(-1px);
+}
+
+.pwa-install-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pwa-install-text {
+    white-space: nowrap;
+}
+
+.pwa-install-close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.pwa-install-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* PWA Update Notification */
+.pwa-update-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 9999;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(40, 167, 69, 0.3);
+}
+
+.pwa-update-notification.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pwa-update-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pwa-update-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pwa-update-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.pwa-update-button {
+    background: white;
+    color: #28a745;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.pwa-update-button:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* PWA Toast Notification */
+.pwa-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #333;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    text-align: center;
+}
+
+.pwa-toast.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.dark-theme .pwa-toast {
+    background: #424242;
+}
+
+/* PWA Status Badge */
+.pwa-status-badge {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(40, 167, 69, 0.9);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 9998;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.pwa-status-badge.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pwa-status-badge.offline {
+    background: rgba(255, 193, 7, 0.9);
+    color: #333;
+}
+
+.pwa-status-badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.dark-theme .pwa-status-badge.offline {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.dark-theme .pwa-status-badge.offline::before {
+    background: #ffc107;
+}
+
+/* Splash Screen Styles for PWA */
+@media (display-mode: standalone) {
+    body {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .pwa-install-button {
+        bottom: calc(24px + env(safe-area-inset-bottom));
+    }
+    
+    .pwa-toast {
+        bottom: calc(24px + env(safe-area-inset-bottom));
+    }
+    
+    .pwa-status-badge {
+        bottom: calc(24px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Responsive adjustments for PWA elements */
+@media (max-width: 480px) {
+    .pwa-install-button {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+        justify-content: center;
+    }
+    
+    .pwa-update-notification {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+    
+    .pwa-update-button {
+        width: 100%;
+    }
+    
+    .pwa-toast {
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        transform: translateX(-50%) translateY(100px);
+    }
+    
+    .pwa-toast.visible {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Dark mode support for PWA elements */
+.dark-theme .pwa-install-button {
+    background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+    box-shadow: 0 8px 30px rgba(100, 181, 246, 0.3);
+}
+
+.dark-theme .pwa-install-button:hover {
+    box-shadow: 0 12px 40px rgba(100, 181, 246, 0.4);
+}
+
+.dark-theme .pwa-install-close {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .pwa-install-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme .pwa-update-button {
+    background: #1a1a1a;
+    color: #28a745;
+}
+
+.dark-theme .pwa-update-button:hover {
+    background: #2d2d2d;
+}
+
+/* Hide PWA elements when printing */
+@media print {
+    .pwa-install-button,
+    .pwa-update-notification,
+    .pwa-toast,
+    .pwa-status-badge {
+        display: none !important;
+    }
+}

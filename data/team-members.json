@@ -1,0 +1,278 @@
+[
+    {
+        "id": "robin-cabeza-ruiz",
+        "name": "Robin Cabeza-Ruiz, PhD.",
+        "image": "images/team/robin_cabeza_ruiz.png",
+        "roles": [
+            { "text": "Director of the Study Center", "translateKey": "robin_director" },
+            { "text": "B.Sc. in Computer Science", "translateKey": "robin_specialty" }
+        ],
+        "bioKey": "robin_bio",
+        "contact": {
+            "email": "robbinc91@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/robin-cabeza-ruiz-50575b113/",
+            "googleScholar": "https://scholar.google.com/citations?user=MAtFl38AAAAJ&hl",
+            "portfolio": "https://robbinc91.github.io/",
+            "github": "https://github.com/robbinc91"
+        },
+        "interests": ["CAD/CAM", "Artificial Intelligence", "Educational Technology"],
+        "publications": [
+            "Cabeza-Ruiz, R.; Velázquez-Pérez, L.; González-Dalmau, E.; Linares-Barranco, A.; Pérez-Rodríguez, R. Deep Learning-Based Assessment of Brainstem Volume Changes in Spinocerebellar Ataxia Type 2 (SCA2): A Study on Patients and Preclinical Subjects. Sensors 2025, 25, 6009. https://doi.org/10.3390/s25196009",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Linares-Barranco, A., Pérez-Rodríguez, R. (2025). Automated Thalamic Nuclei Segmentation from Brain T1-W MRI Using Convolutional Neural Networks. In: Torres, Y., Beltrán, A.M., Felix, M., Peralta, E., Larios Marín, D.F. (eds) A Cross-Disciplinary Exploration of STEM. STEMEPS 2024. Springer Proceedings in Materials, vol 85. Springer, Cham. https://doi.org/10.1007/978-3-031-99987-1_43",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Pérez-Rodríguez, R. et al. ConvNets for automatic detection of polyglutamine SCAs from brain MRIs: state of the art applications. Med Biol Eng Comput 61, 1–24 (2023). https://doi.org/10.1007/s11517-022-02714-w",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Linares-Barranco, A., & Pérez-Rodríguez, R. (2022). Convolutional Neural Networks for Segmenting Cerebellar Fissures from Magnetic Resonance Imaging. Sensors, 22(4), 1345. https://doi.org/10.3390/s22041345",
+            "Cabeza-Ruiz, R., Velázquez-Pérez, L., Pérez-Rodríguez, R. (2021). Convolutional Neural Networks as Support Tools for Spinocerebellar Ataxia Detection from Magnetic Resonances. In: Hernández Heredia, Y., Milián Núñez, V., Ruiz Shulcloper, J. (eds) Progress in Artificial Intelligence and Pattern Recognition. IWAIPR 2021. Lecture Notes in Computer Science(), vol 13055. Springer, Cham. https://doi.org/10.1007/978-3-030-89691-1_11"
+        ],
+        "search_keys": [
+            "robin", "cabeza", "ruiz", "r.", "robin cabeza", "robin cabeza ruiz", "cabeza-ruiz"
+        ]
+    },
+    {
+        "id": "roberto-perez-rodriguez",
+        "name": "Roberto Pérez Rodríguez, PhD.",
+        "image": "images/team/roberto_perez_rodriguez.png",
+        "roles": [
+            { "text": "Mechanical Engineer" },
+            { "text": "Cuban Academy of Sciences" },
+            { "text": "Line Coordinator in the Doctoral Program \"Development of Engineering\"" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "roberto.perez@uho.edu.cu" },
+        "interests": ["Manufacturing", "Engineering Education"],
+        "publications": [],
+        "search_keys": [
+            "roberto", "perez", "rodriguez", "r.", "roberto perez", "robin cabeza rodriguez", "perez-rodriguez"
+        ]
+    },
+    {
+        "id": "yorley-arbella-feliciano",
+        "name": "Yorley Arbella-Feliciano, PhD.",
+        "image": "images/team/yorley_arbella_feliciano.png",
+        "roles": [
+            { "text": "Mechanical Engineer" },
+            { "text": "Coordinator of the Master's Program in CAD/CAM" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "yorley.arbella@uho.edu.cu" },
+        "interests": ["CAD/CAM", "Mechanical Design"],
+        "publications": [],
+        "search_keys": [
+            "yorley", "arbella", "feliciano", "y.", "yorley arbella", "yorley arbella feliciano", "arbella-feliciano"
+        ]
+    },
+    {
+        "id": "rolando-esteban-simeon-monet",
+        "name": "Rolando Esteban Simeón-Monet, PhD.",
+        "image": "images/team/rolando_esteban_simeon.png",
+        "roles": [
+            { "text": "Mechanical Engineer" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "rolando.simeon@uho.edu.cu" },
+        "interests": ["Mechanical Engineering"],
+        "publications": [],
+        "search_keys": [
+            "rolando", "esteban", "simeon", "monet", "r.", "e.", "simeon-monet", "rolando esteban simeon", "rolando simeon", "rolando simeon monet", "rolando esteban simeon monet"
+        ]
+    },
+    {
+        "id": "luis-wilfredo-hernandez-gonzalez",
+        "name": "Luis Wilfredo Hernández-González, PhD.",
+        "image": null,
+        "roles": [
+            { "text": "Mechanical Engineer" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "luis.wilfredo@uho.edu.cu" },
+        "interests": ["Mechanical Engineering"],
+        "publications": [],
+        "search_keys": [
+            "luis", "wilfredo", "hernandez", "gonzalez", "l.", "w.", "hernandez-gonzalez", "luis wilfredo hernandez", "hernandez-gonzalez", "wilfredo hernandez", "luis wilfredo hernandez gonzalez"
+        ]
+    },
+    {
+        "id": "roberto-andres-estrada-cingualbres",
+        "name": "Roberto Andrés Estrada-Cingualbres, PhD.",
+        "image": "images/team/roberto_andres_estrada.png",
+        "roles": [
+            { "text": "Aeronautical Engineer" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "roberto.estrada@uho.edu.cu" },
+        "interests": ["Aeronautics", "Engineering"],
+        "publications": [],
+        "search_keys": [
+            "roberto", "andres", "estrada", "cingualbres", "r.", "a.", "estrada-cingualbres", "roberto estrada", "roberto estrada cingualbres", "roberto andres estrada", "roberto andres estrada cingualbres"
+        ]
+    },
+    {
+        "id": "luis-enrique-acosta-gonzalez",
+        "name": "Luis Enrique Acosta-González, PhD.",
+        "image": "images/team/luis_enrique_acosta.png",
+        "roles": [
+            { "text": "Civil Engineer" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "luis.acosta@uho.edu.cu" },
+        "interests": ["Civil Engineering"],
+        "publications": [],
+        "search_keys": [
+            "luis", "enrique", "acosta", "gonzalez", "l.", "e.", "acosta-gonzalez", "luis acosta", "luis enrique acosta", "luis enrique acosta gonzalez", "luis acosta gonzalez"
+        ]
+    },
+    {
+        "id": "anabel-reyes-ramirez",
+        "name": "Anabel Reyes-Ramírez, PhD.",
+        "image": "images/team/anabel_reyes_ramirez.png",
+        "roles": [
+            { "text": "Civil Engineer" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "anabel.reyes@uho.edu.cu" },
+        "interests": ["Civil Engineering"],
+        "publications": [],
+        "search_keys": [
+            "anabel", "reyes", "ramirez", "a.", "r.", "anabel reyes", "anabel reyes ramirez", "reyes-ramirez"
+        ]
+    },
+    {
+        "id": "libys-martha-zuniga-igarza",
+        "name": "Libys Martha Zúñiga Igarza, PhD.",
+        "image": null,
+        "roles": [
+            { "text": "Architect" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "libys.zuniga@uho.edu.cu" },
+        "interests": ["Architecture"],
+        "publications": [],
+        "search_keys": [
+            "libys", "martha", "zuniga", "igarza", "l.", "m.", "zuniga-igarza", "libys zuniga", "libys suniga igarza", "libys martha zuniga", "libys martha suniga igarza"
+        ]
+    },
+    {
+        "id": "odet-lopez-batista",
+        "name": "Odet López Batista, M.Sc.",
+        "image": null,
+        "roles": [
+            { "text": "B.Sc. Mathematics" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "odet.lopez@uho.edu.cu" },
+        "interests": ["Mathematics"],
+        "publications": [],
+        "search_keys": [
+            "odet", "lopez", "batista", "o.", "odet lopez", "odet lopez batista", "lopez-batista"
+        ]
+    },
+    {
+        "id": "luis-guillermo-rodriguez-velazquez",
+        "name": "Luis Guillermo Rodríguez Velázquez, M.Sc.",
+        "image": null,
+        "roles": [
+            { "text": "Mechanical Engineer" },
+            { "text": "PhD Student, \"Development of Engineering\" Program" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "luis.rodriguez@uho.edu.cu" },
+        "interests": ["Mechanical Engineering"],
+        "publications": [],
+        "search_keys": [
+            "luis", "guillermo", "rodriguez", "velazquez", "l.", "g.", "rodriguez-velazquez", "luis guillermo", "luis guillermo rodriguez", "rodriguez-velazquez"
+        ]
+    },
+    {
+        "id": "adrian-de-la-luz-alvarez",
+        "name": "Adrián de la Luz Álvarez",
+        "image": null,
+        "roles": [
+            { "text": "Civil Engineer" },
+            { "text": "PhD Student, \"Development of Engineering\" Program" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "adrian.luz@uho.edu.cu" },
+        "interests": ["Civil Engineering"],
+        "publications": [],
+        "search_keys": [
+            "adrian", "de la luz", "luz", "alvarez", "a."
+        ]
+    },
+    {
+        "id": "carlos-luis-martinez-fernandez",
+        "name": "Carlos Luis Martínez Fernández",
+        "image": null,
+        "roles": [
+            { "text": "Civil Engineer" },
+            { "text": "PhD Student, \"Development of Engineering\" Program" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "carlos.martinez@uho.edu.cu" },
+        "interests": ["Civil Engineering"],
+        "publications": [],
+        "search_keys": [
+            "carlos", "luis", "martinez", "fernandez", "c.", "l.", "martinez-fernandez", "carlos martinez", "carlos luis martinez", "carlos martinez fernandez", "carlos luis martinez fernandez"
+        ]
+    },
+    {
+        "id": "pavel-michel-almaguer-zaldivar",
+        "name": "Pavel Michel Almaguer Zaldívar",
+        "image": null,
+        "roles": [
+            { "text": "Mechanical Engineer" },
+            { "text": "PhD" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "pavel@uho.edu.cu" },
+        "interests": ["Mechanical Engineering"],
+        "publications": [],
+        "search_keys": [
+            "pavel", "michel", "almaguer", "zaldivar", "p.", "m.", "almaguer-zaldivar", "pavel michel", "pavel michel almaguer", "pavel michel almaguer zaldivar"
+        ]
+    },
+    {
+        "id": "yosvany-morales-hernandez",
+        "name": "Yosvany Morales Hernández",
+        "image": null,
+        "roles": [
+            { "text": "Mechanical Engineer" },
+            { "text": "PhD Student, \"Development of Engineering\" Program" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "yosvany@uho.edu.cu" },
+        "interests": ["Mechanical Engineering"],
+        "publications": [],
+        "search_keys": [
+            "yosvany", "morales", "hernandez", "y.", "yosvany morales", "yosvany morales hernandez", "morales-hernandez"
+        ]
+    },
+    {
+        "id": "rene-ortiz-cruz",
+        "name": "René ortiz Cruz",
+        "image": null,
+        "roles": [
+            { "text": "Technician" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "rene@uho.edu.cu" },
+        "interests": [],
+        "publications": [],
+        "search_keys": [
+            "rene", "ortiz", "cruz", "r.", "rene ortiz", "rene ortiz cruz", "ortiz-cruz"
+        ]
+    },
+    {
+        "id": "dadira-aracelis-bedia-silva",
+        "name": "Dadira Aracelis bedia Silva",
+        "image": null,
+        "roles": [
+            { "text": "Secretary" }
+        ],
+        "bioKey": "generic_bio",
+        "contact": { "email": "dadira@uho.edu.cu" },
+        "interests": [],
+        "publications": [],
+        "search_keys": [
+            "dadira", "aracelis", "bedia", "silva"
+        ]
+    }
+]

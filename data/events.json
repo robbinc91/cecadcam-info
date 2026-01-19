@@ -1,0 +1,302 @@
+[
+    {
+        "name": "Conferencia Científica Internacional de la Universidad de Holguín",
+        "date": "April 2025",
+        "location": "University of Holguín, Cuba",
+        "presentations": 23,
+        "isbn": "ISBN 978-959-7263-99-9",
+        "papers": [
+            {
+                "title": "Diagnóstico del Estado Actual de La Metodología BIM en la Gestión de Proyectos en Empresas de la construcción de Holguín",
+                "authors": ["Luis Enrique Acosta González", "Anabel Reyes Ramírez", "Liset Estopiñan Mulet"]
+            },
+            {
+                "title": "Detección de Interferencias en el Modelo 3D de una Edificación mediante el Software BIM Navisworks",
+                "authors": ["Anabel Reyes Ramírez", "Luis Enrique Acosta González", "Amalia Margarita La O Martínez"]
+            },
+            {
+                "title": "Aplicación de la Tecnología INSAR para la Obtención de Modelos Digitales de Elevación (MDE)",
+                "authors": ["Anabel Reyes Ramírez", "Luis Enrique Acosta González", "Antonio David Molina Ramírez"]
+            },
+            {
+                "title": "Modelación Geométrica de Edificaciones Patrimoniales con Empleo de Topografía de Alta Definición",
+                "authors": ["Juan Antonio Mulet Naranjo", "Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva"]
+            },
+            {
+                "title": "Contribución de La Topografía de Alta Definición al Diagnóstico del Estado Geométrico de Elementos Constructivos",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Análisis bibliométrico sobre la modelación ionosférica derivada de observaciones GNSS",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Monitoreo de la actividad geodinámica local reciente con empleo del sistema global de navegación por satélite (GNSS)",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Análisis resistivo de tipologías de estructuras soportes de cubiertas ligeras con empleo de herramientas computacionales",
+                "authors": ["Carlos Luis Martínez Fernández", "Roberto Andrés Estrada Cingüalbres", "Anabel Reyes Ramírez"]
+            },
+            {
+                "title": "Evaluación computacional de escenarios de riesgo ante fuertes vientos para edificaciones con cubiertas ligeras",
+                "authors": ["Liliana Angulo Batista", "Anabel Reyes Ramírez", "Roberto Andrés Estrada Cingüalbres"]
+            },
+            {
+                "title": "Base de Datos de los monumentos en el municipio Holguín",
+                "authors": ["Robin Cabeza Ruiz", "Anabel Reyes Ramírez", "Yorley Arbella Feliciano"]
+            },
+            {
+                "title": "Resiliencia y economía circular. ¿Cómo enfrentarla?",
+                "authors": ["Libys Martha Zúñiga Igarza", "Silvia Dotres Zúñiga", "Jorge Luis Rodríguez Gomez"]
+            },
+            {
+                "title": "Evaluación del flujo informativo en el proceso constructivo de una obra constructiva",
+                "authors": ["Darlana Liz Hernández Sondón", "Irma Clara Sondón González", "Libys Marta Zúñiga Igarza"]
+            },
+            {
+                "title": "Formación de la competencia profesional trabajos básicos de ingeniería. Fundamentos teóricos",
+                "authors": ["Roberto Miguel Rodríguez Benítez", "Miguel Alejandro Cruz Cabezas", "Libys Martha Zúñiga Igarza"]
+            },
+            {
+                "title": "Gestión ambiental de playas turísticas basada en capacidad de carga. Costa norte de Holguín",
+                "authors": ["Jorge Luis Rodríguez Gómez", "Libys Martha Zúñiga Igarza", "Ridel Rodríguez Paneque"]
+            },
+            {
+                "title": "Competencias laborales y uso de las TIC en la Empresa Inmobiliaria del turismo, Holguín",
+                "authors": ["Jorge Luis Rodríguez Gómez", "Freddy Rafael Sarmiento Torres", "Libys Martha Zúñiga Igarza"]
+            },
+            {
+                "title": "Modelación matemática del comportamiento termodinámico de la PCHE Mayarí",
+                "authors": ["Robin Cabeza Ruiz", "Roberto Johan Sierra Pérez", "Yorley Arbella Feliciano"]
+            },
+            {
+                "title": "Gestión del proyecto Diseño autómata para la PCHE Mayarí",
+                "authors": ["Lizandra Salazar Pérez", "Roberto Pérez Rodríguez", "Yorley Arbella Feliciano"]
+            },
+            {
+                "title": "Modelación geométrica de las Zonas técnicas de la PCHE Mayarí",
+                "authors": ["Robin Cabeza Ruiz", "Roberto Johan Sierra Pérez", "Yorley Arbella Feliciano"]
+            },
+            {
+                "title": "Simulación numérica del comportamiento de la humedad relativa de la PCHE Mayarí",
+                "authors": ["Roberto Pérez Rodríguez", "Robin Cabeza Ruiz", "Lizandra Salazar Pérez"]
+            },
+            {
+                "title": "Deep learning-based assessment of brainstem volume changes in spinocerebellar ataxia type 2 (SCA2): a study on patients and preclinical subjects",
+                "authors": ["Robin Cabeza Ruiz", "Luis C. Velázquez Pérez", "Alejandro Linares-Barranco", "Roberto Pérez-Rodríguez"]
+            },
+            {
+                "title": "Smartphone-based tool for remote capture of the SARA test in patients with SCA2",
+                "authors": ["Rafael Mario Carballosa Hernández", "Roberto Pérez-Rodríguez", "Luis C. Velázquez Pérez", "Julio César Rodríguez Díaz"]
+            },
+            {
+                "title": "Identification of kinematic variables in the heel-shin-knee test in patients with spinocerebellar ataxia type 2 (SCA2) using smartphones",
+                "authors": ["Odet Lopez-Batista", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez-Rodríguez"]
+            },
+            {
+                "title": "Determination of kinematic variables from the rapid alternating movement test in patients with spinocerebellar ataxia type 2 (SCA2) based-on smartphone",
+                "authors": ["Alfredo Vega Ramírez", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez-Rodríguez"]
+            }
+        ]
+    },
+    {
+        "name": "FORMER. IV Simposio de Género y Energía renovable y 1era Convención Internacional de Energía y nuevas tecnologías e Innovación para el Desarrollo Sostenible ENERGY-TID",
+        "date": "May 2025",
+        "location": "Cuba",
+        "presentations": 9,
+        "papers": [
+            {
+                "title": "Herramienta para la evaluación de vulnerabilidad en la gestión del diseño de cubiertas ligeras",
+                "authors": ["Anabel Reyes Ramírez", "Libys Martha Zúñiga Igarza", "Raul Emilio Cruz García"]
+            },
+            {
+                "title": "Diseño de plataforma basada en SIG para el monitoreo de la SCA2 en Holguín",
+                "authors": ["Anabel Reyes Ramírez", "Luis Enrique Acosta González", "Ernesto Emilio Aguilar Leyva"]
+            },
+            {
+                "title": "Controlador automático para la operación del sistema de ventilación de la PCHE Mayarí",
+                "authors": ["Erlan Vega Quiala", "Lizandra Salazar Pérez", "Yorley Arbella Feliciano"]
+            },
+            {
+                "title": "Simulación numérica del comportamiento de la humedad relativa de la PCHE Mayarí",
+                "authors": ["Yorley Arbella Feliciano", "Lizandra Salazar Pérez", "Roberto Johan Sierra Pérez"]
+            },
+            {
+                "title": "Quantitative analysis of rapid alternating movements in SCA2 using video processing and AI algorithms: pipeline for automated measurement of biomechanical parameters",
+                "authors": ["Alfredo Vega Ramírez", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez Rodríguez"]
+            },
+            {
+                "title": "The brain MRI segmentation using the atlas framework focused on the SCA2 diagnosis: a rapid review",
+                "authors": ["Lis Mariela Segura Vargas", "Robin Cabeza Ruiz", "Luis Velázquez Pérez", "Roberto Pérez Rodríguez"]
+            },
+            {
+                "title": "Early detection of motor impairment in SCA2 with AI: quantitative analysis of trajectories and corrections in the heel-knee-shin test",
+                "authors": ["Odet Lopez Batista", "Luis Velázquez Pérez", "Roberto Rodríguez-Labrada", "Julio César Rodríguez-Díaz", "Roberto Pérez Rodríguez"]
+            },
+            {
+                "title": "Using MBSE to model the kinematic variables of gait and posture in patients with SCA2",
+                "authors": ["Roberto Pérez Rodríguez", "Roberto Rodríguez Labrada", "Luis Velázquez Pérez"]
+            },
+            {
+                "title": "Data-mix module enhances the use of multi-modal imaging data for thalamic nuclei segmentation",
+                "authors": ["Robin Cabeza Ruiz", "Luis Velázquez Pérez", "Evelio González Dalmau", "Roberto Pérez Rodríguez"]
+            }
+        ]
+    },
+    {
+        "name": "EXPOCIENCIA",
+        "date": "May 2025",
+        "location": "Cuba",
+        "presentations": 2,
+        "papers": [
+            {
+                "title": "Experiencias en la Utilización de Modelos Computacionales en la Gestión de Riesgo Ante Desastres",
+                "authors": ["Anabel Reyes Ramírez"],
+                "workshop": "Taller: Metas y resultados con valor agregado por la ciencia, tecnología e innovación"
+            },
+            {
+                "title": "Herramientas de IA para la segmentación de imágenes de resonancia magnética",
+                "authors": ["Robin Cabeza Ruiz"],
+                "workshop": "Taller: Inteligencia Artificial y Futuro compartido: la tecnología al servicio de la sociedad"
+            }
+        ]
+    },
+    {
+        "name": "XI Congreso de Agrimensura. Hotel Habana Libre. Ciudad de la Habana, Cuba",
+        "date": "September 2025",
+        "location": "Havana, Cuba",
+        "presentations": 3,
+        "papers": [
+            {
+                "title": "Empleo de topografía de alta definición para la modelación geométrica de edificaciones patrimoniales",
+                "authors": ["Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva", "Juan Antonio Mulet Naranjo", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Diagnóstico del estado geométrico de la torre del faro 'Punta Lucrecia' con empleo de topografía de alta definición",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Diagnóstico del estado actual de la metodología BIM en la gestión de proyectos en empresas de la construcción de Holguín",
+                "authors": ["Luis Enrique Acosta González", "Liset Estopiñan Mulet", "Anabel Reyes Ramírez"]
+            }
+        ]
+    },
+    {
+        "name": "15o Congreso Internacional en Competitividad Organizacional, RILCO Yucatán, México",
+        "date": "October 2025",
+        "location": "Yucatán, Mexico",
+        "presentations": 6,
+        "papers": [
+            {
+                "title": "Integración de la metodología BIM en el sistema presupuestario cubano para el sector de la construcción",
+                "authors": ["Eugenio David Carbonell Charchabal", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Procedimiento para el diagnóstico de patologías en edificaciones patrimoniales mediante la integración de tecnologías VANT-BIM",
+                "authors": ["Anabel Reyes Ramírez", "Eyllen Nufiez Correa", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Gestión de riesgo ante fuertes vientos en entornos urbanos mediante simulaciones computacionales",
+                "authors": ["Liliana Angulo Batista", "Anabel Reyes Ramírez", "Roberto Estrada Cingüalbres"]
+            },
+            {
+                "title": "Mejoras en la gestión de edificaciones patrimoniales mediante el empleo de modelos geométricos tridimensionales",
+                "authors": ["Juan Antonio Mulet Naranjo", "Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva"]
+            },
+            {
+                "title": "Aplicación de la topografía de alta definición al diagnóstico del estado geométrico de elementos constructivos",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Aplicación de los sistemas de información geográfica en apoyo a la movilidad urbana en Holguín, Cuba",
+                "authors": ["Miguel Enrique Mouso Gómez", "Libys Martha Zúñiga Igarza", "Anabel Reyes Ramírez"]
+            }
+        ]
+    },
+    {
+        "name": "XII Jornadas de I+D+i, IX Jornadas de doctorado ISI & 4th International Workshop on STEM Escuela Politécnica Superior de Sevilla, España",
+        "date": "October 2025",
+        "location": "Seville, Spain",
+        "presentations": 6,
+        "papers": [
+            {
+                "title": "Herramienta computacional para la evaluación de vulnerabilidad en el diseño de cubiertas ligeras ante fuertes vientos",
+                "authors": ["Anabel Reyes Ramírez", "Roberto Pérez Rodríguez", "Roberto Estrada Cingüalbres", "Libys Martha Zúñiga Igarza"]
+            },
+            {
+                "title": "¿Por qué colapsan las cubiertas ligeras ante el impacto de los vientos extremos?",
+                "authors": ["Carlos Luis Martínez Fernández", "Roberto Andrés Estrada Cingüalbres", "Anabel Reyes Ramírez"]
+            },
+            {
+                "title": "Empleo de topografía de alta definición para el diagnóstico del estado geométrico del faro 'Punta Lucrecia' en Holguín, Cuba",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Improvement of coastal tourism development planning based on process reengineering",
+                "authors": ["Rodríguez Gómez, Jorge Luis", "Libys Martha Zúñiga Igarza", "Ridel Rodríguez Paneque"]
+            },
+            {
+                "title": "La segmentación de imágenes por resonancia magnética cerebral utilizando el enfoque de atlas centrado en el diagnóstico de SCA2: Una Revisión Rápida",
+                "authors": ["Robin Cabeza Ruiz", "Roberto Pérez Rodríguez", "Luis Velázquez Pérez"]
+            },
+            {
+                "title": "Brainstem Segmentation in 3D MRI using Quaternion-Valued CNNs",
+                "authors": ["Robin Cabeza Ruiz", "Roberto Pérez Rodríguez", "Luis Velázquez Pérez"]
+            }
+        ]
+    },
+    {
+        "name": "VIII Jornada Internacional de la Ingeniería Civil en Cuba",
+        "date": "October 2025",
+        "location": "Cuba",
+        "presentations": 5,
+        "keynotes": 2,
+        "papers": [
+            {
+                "title": "Consideraciones para el diseño de una herramienta basada en SIG (Sistema de Información Geográfica) en apoyo al Sistema de Salud Público en Holguín",
+                "authors": ["Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Diagnóstico del estado geométrico de la torre del Faro 'Punta Lucrecia' con empleo de topografía de alta definición",
+                "authors": ["Ernesto Emilio Aguilar Leyva", "Anabel Reyes Ramírez", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Aplicación de la topografía de alta definición en la modelación geométrica de edificaciones patrimoniales",
+                "authors": ["Anabel Reyes Ramírez", "Ernesto Emilio Aguilar Leyva", "Juan Antonio Mulet Naranjo", "Luis Enrique Acosta González"]
+            },
+            {
+                "title": "Análisis de resistencia de tipologías de estructuras soportes de cubiertas ligeras con empleo de herramientas computacionales",
+                "authors": ["Carlos Luis Martínez Fernández", "Roberto Andrés Estrada Cingüalbres", "Anabel Reyes Ramírez"]
+            },
+            {
+                "title": "Uso de la Interferometría de Radar de apertura sintética INSAR para la Obtención de Modelos Digitales de Elevación (MDE)",
+                "authors": ["Luis Enrique Acosta González", "Antonio David Molina Ramírez", "Anabel Reyes Ramírez"]
+            }
+        ],
+        "keynotes": [
+            {
+                "title": "La ingeniería civil en la era digital, claves para una Construcción 4.0",
+                "author": "Anabel Reyes Ramírez",
+                "type": "Conferencia magistral"
+            },
+            {
+                "title": "Sostenibilidad desde un enfoque de la resiliencia fisico-espacial de las estructuras construidas y el efecto del viento",
+                "author": "Libys Martha Zúñiga Igarza",
+                "type": "Conferencia magistral"
+            }
+        ]
+    },
+    {
+        "name": "VIII Simposio Internacional sobre Sistemas electromecánicos SISEM Universidad Antonio Nariño, Colombia",
+        "date": "November 2025",
+        "location": "Colombia",
+        "presentations": 1,
+        "papers": [
+            {
+                "title": "Diseño Inteligente en la Era 4.0: Los sistemas CAD/CAM/CAE y la IA revolucionando la creación de productos",
+                "authors": ["Roberto Pérez Rodríguez"]
+            }
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "email": { "icon": "fas fa-envelope", "text": "Email" },
+    "linkedin": { "icon": "fab fa-linkedin", "text": "LinkedIn" },
+    "googleScholar": { "icon": "fas fa-graduation-cap", "text": "Google Scholar" },
+    "portfolio": { "icon": "fas fa-code", "text": "Portfolio" },
+    "github": { "icon": "fab fa-github", "text": "Github" }
+}

@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "image": "images/projects/01.png",
+        "titleKey": "project1_title",
+        "descKey": "project1_desc",
+        "programKey": "project1_program",
+        "periodKey": "project1_period"
+    },
+    {
+        "id": 2,
+        "image": "images/projects/02.png",
+        "titleKey": "project2_title",
+        "descKey": "project2_desc",
+        "programKey": "project2_program",
+        "periodKey": "project2_period"
+    },
+    {
+        "id": 3,
+        "image": "images/projects/03.png",
+        "titleKey": "project3_title",
+        "descKey": "project3_desc",
+        "programKey": "project3_program",
+        "periodKey": "project3_period"
+    },
+    {
+        "id": 4,
+        "image": "images/projects/04.png",
+        "titleKey": "project4_title",
+        "descKey": "project4_desc",
+        "programKey": "project4_program",
+        "periodKey": "project4_period"
+    },
+    {
+        "id": 5,
+        "image": "images/projects/05.png",
+        "titleKey": "project5_title",
+        "descKey": "project5_desc",
+        "programKey": "project5_program",
+        "periodKey": "project5_period"
+    },
+    {
+        "id": 6,
+        "image": "images/projects/06.png",
+        "titleKey": "project6_title",
+        "descKey": "project6_desc",
+        "programKey": "project6_program",
+        "periodKey": "project6_period"
+    },
+    {
+        "id": 7,
+        "image": "images/projects/07.png",
+        "titleKey": "project7_title",
+        "descKey": "project7_desc",
+        "programKey": "project7_program",
+        "periodKey": "project7_period"
+    },
+    {
+        "id": 8,
+        "image": "images/projects/08.png",
+        "titleKey": "project8_title",
+        "descKey": "project8_desc",
+        "programKey": "project8_program",
+        "periodKey": "project8_period"
+    },
+    {
+        "id": 9,
+        "image": "images/projects/09.png",
+        "titleKey": "project9_title",
+        "descKey": "project9_desc",
+        "programKey": "project9_program",
+        "periodKey": "project9_period"
+    },
+    {
+        "id": 10,
+        "image": "images/projects/10.png",
+        "titleKey": "project10_title",
+        "descKey": "project10_desc",
+        "programKey": "project10_program",
+        "periodKey": "project10_period"
+    },
+    {
+        "id": 11,
+        "image": "images/projects/11.png",
+        "titleKey": "project11_title",
+        "descKey": "project11_desc",
+        "programKey": "project11_program",
+        "periodKey": "project11_period"
+    },
+    {
+        "id": 12,
+        "image": "images/projects/12.png",
+        "titleKey": "project12_title",
+        "descKey": "project12_desc",
+        "programKey": "project12_program",
+        "periodKey": "project12_period"
+    }
+]

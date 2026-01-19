@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - CAD/CAM Study Center</title>
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="background-color" content="#1a1a1a">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.svg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .offline-container {
+            text-align: center;
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0, 86, 179, 0.3);
+        }
+        
+        .offline-icon svg {
+            width: 60px;
+            height: 60px;
+            fill: white;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .offline-message {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .offline-tips {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .offline-tips h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #64b5f6;
+        }
+        
+        .offline-tips ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .offline-tips li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .offline-tips li:last-child {
+            border-bottom: none;
+        }
+        
+        .offline-tips li::before {
+            content: '•';
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        
+        .retry-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 86, 179, 0.4);
+        }
+        
+        .retry-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 86, 179, 0.5);
+        }
+        
+        .retry-button:active {
+            transform: translateY(0);
+        }
+        
+        .retry-button svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #ffc107;
+            margin-bottom: 25px;
+        }
+        
+        .status-indicator::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #ffc107;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .logo {
+            margin-bottom: 40px;
+        }
+        
+        .logo a {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+        }
+        
+        .logo h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .offline-message {
+                font-size: 1rem;
+            }
+            
+            .offline-tips {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="offline-container">
+        <div class="logo">
+            <a href="/">
+                <i class="fas fa-cube"></i>
+                <h2>CAD/CAM Study Center</h2>
+            </a>
+        </div>
+        
+        <div class="status-indicator">
+            Currently Offline
+        </div>
+        
+        <div class="offline-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4c-1.48 0-2.85.43-4.01 1.17l1.46 1.46C10.21 6.23 11.08 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3 0 1.13-.64 2.11-1.56 2.62l1.45 1.45C23.16 18.16 24 16.68 24 15c0-2.64-2.05-4.78-4.65-4.96zM3 5.27l2.75 2.74C2.56 8.15 0 10.77 0 14c0 3.31 2.69 6 6 6h11.73l2 2L21 20.73 4.27 4 3 5.27zM7.73 10l8 8H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h1.73z"/>
+            </svg>
+        </div>
+        
+        <h1>You're Offline</h1>
+        
+        <p class="offline-message">
+            It looks like you've lost your internet connection. 
+            Don't worry - some content may still be available offline.
+        </p>
+        
+        <div class="offline-tips">
+            <h2>What you can do:</h2>
+            <ul>
+                <li>Check your network connection and try again</li>
+                <li>Return to the app when you're back online</li>
+                <li>Previously loaded pages are still available</li>
+                <li>Some features may be limited until reconnected</li>
+            </ul>
+        </div>
+        
+        <button class="retry-button" onclick="location.reload()">
+            <svg viewBox="0 0 24 24">
+                <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+            </svg>
+            Try Again
+        </button>
+    </div>
+    
+    <script>
+        // Check for online status
+        function checkOnlineStatus() {
+            if (navigator.onLine) {
+                location.reload();
+            }
+        }
+        
+        // Check status every 3 seconds
+        setInterval(checkOnlineStatus, 3000);
+        
+        // Listen for online event
+        window.addEventListener('online', () => {
+            location.reload();
+        });
+    </script>
+</body>
+
+</html>

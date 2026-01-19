@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0056b3" rx="64"/>
+  <g fill="white">
+    <polygon points="256,96 416,176 416,336 256,416 96,336 96,176" opacity="0.9"/>
+    <polygon points="256,96 256,416 96,176" opacity="0.7"/>
+    <polygon points="256,96 416,176 256,176" opacity="0.8"/>
+    <polygon points="416,176 416,336 256,416" opacity="0.6"/>
+  </g>
+  <text x="256" y="480" font-family="Arial,sans-serif" font-size="24" fill="white" text-anchor="middle" opacity="0.8">CAD/CAM</text>
+</svg>
